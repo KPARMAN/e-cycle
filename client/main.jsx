@@ -33,10 +33,19 @@ const App = () => (
   </QueryClientProvider>
 );
 
-const rootContainer = document.getElementById("root");
+let root;
 
-if (!rootContainer._root) {
-  rootContainer._root = createRoot(rootContainer);
+function render() {
+  if (!root) {
+    root = createRoot(document.getElementById("root"));
+  }
+  root.render(<App />);
 }
 
-rootContainer._root.render(<App />);
+render();
+
+if (import.meta.hot) {
+  import.meta.hot.accept("./App.jsx", () => {
+    render();
+  });
+}
