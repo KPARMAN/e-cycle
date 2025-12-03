@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 relative bg-cover bg-center bg-fixed bg-no-repeat"
@@ -21,10 +24,14 @@ export default function Hero() {
               can easily track, verify, and process waste for responsible recycling.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="bg-primary px-8 py-6 rounded-lg  text-black hover:bg-primary/90 text-sm">
+              <Button
+                onClick={() => navigate("/auth/login")}
+                className="bg-primary px-8 py-6 rounded-lg  text-black hover:bg-primary/90 text-sm"
+              >
                 Login...
               </Button>
               <Button
+                onClick={() => navigate("/auth/role-selection")}
                 className="bg-green-100 text-foreground hover:bg-green-200 text-base px-8 py-6 rounded-lg border-transparent"
               >
                 Sign up
@@ -32,7 +39,7 @@ export default function Hero() {
             </div>
           </div>
 
-          
+
         </div>
       </div>
     </section>
