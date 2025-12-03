@@ -33,4 +33,19 @@ const App = () => (
   </QueryClientProvider>
 );
 
-createRoot(document.getElementById("root")).render(<App />);
+let root;
+
+function render() {
+  if (!root) {
+    root = createRoot(document.getElementById("root"));
+  }
+  root.render(<App />);
+}
+
+render();
+
+if (import.meta.hot) {
+  import.meta.hot.accept("./App.jsx", () => {
+    render();
+  });
+}
