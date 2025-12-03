@@ -12,11 +12,11 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col justify-center items-center text-center lg:col-span-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Transform e-waste into <br />
               sustainable solutions
             </h1>
-            <p className="text-lg text-black/90 mb-8 leading-relaxed">
+            <p className="text-lg text-white mb-8 leading-relaxed">
               Streamline e-waste management with our innovative platform. Technicians and admins <br />
               can easily track, verify, and process waste for responsible recycling.
             </p>
