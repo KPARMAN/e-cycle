@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button.jsx";
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
+
   return (
     <section
       className="min-h-screen flex items-center px-4 sm:px-6 lg:px-8 relative bg-cover bg-center bg-fixed bg-no-repeat"
@@ -12,27 +15,31 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col justify-center items-center text-center lg:col-span-2">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black leading-tight mb-6">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
               Transform e-waste into <br />
               sustainable solutions
             </h1>
-            <p className="text-lg text-black/90 mb-8 leading-relaxed">
-              Streamline e-waste management with our innovative platform. Technicians and admins <br />
-              can easily track, verify, and process waste for responsible recycling.
+            <p className="text-lg text-white mb-8 leading-relaxed">
+              Streamline e-waste management with our innovative platform.
+              Technicians and admins <br />
+              can easily track, verify, and process waste for responsible
+              recycling.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button className="bg-primary px-8 py-6 rounded-lg  text-black hover:bg-primary/90 text-sm">
+              <Button
+                onClick={() => navigate("/auth/login")}
+                className="bg-primary px-8 py-6 rounded-lg  text-black hover:bg-primary/90 text-sm"
+              >
                 Login...
               </Button>
               <Button
+                onClick={() => navigate("/auth/role-selection")}
                 className="bg-green-100 text-foreground hover:bg-green-200 text-base px-8 py-6 rounded-lg border-transparent"
               >
                 Sign up
               </Button>
             </div>
           </div>
-
-          
         </div>
       </div>
     </section>
