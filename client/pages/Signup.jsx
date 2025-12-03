@@ -41,7 +41,8 @@ export default function Signup() {
     } else if (formData.password.length < 8) {
       newErrors.password = "Password must be at least 8 characters";
     } else if (!/(?=.*[0-9])(?=.*[!@#$%^&*])/.test(formData.password)) {
-      newErrors.password = "Password must include numbers and special characters";
+      newErrors.password =
+        "Password must include numbers and special characters";
     }
 
     if (formData.password !== formData.confirmPassword) {
@@ -96,7 +97,8 @@ export default function Signup() {
         } else if (value.length < 8) {
           newErrors.password = "Password must be at least 8 characters";
         } else if (!/(?=.*[0-9])(?=.*[!@#$%^&*])/.test(value)) {
-          newErrors.password = "Password must include numbers and special characters";
+          newErrors.password =
+            "Password must include numbers and special characters";
         } else {
           delete newErrors.password;
         }
@@ -155,14 +157,21 @@ export default function Signup() {
               />
             </div>
             <p className="text-gray-700 mb-6 leading-relaxed text-center">
-              "Ever since I started using this platform, listing my waste has become effortless, and I finally feel confident knowing every step—from listings to connecting with recyclers, secure, and completely visible to me"
+              "Ever since I started using this platform, listing my waste has
+              become effortless, and I finally feel confident knowing every
+              step—from listings to connecting with recyclers, secure, and
+              completely visible to me"
             </p>
             <div className="text-center">
               <p className="font-semibold text-gray-900">Michael Chen</p>
-              <p className="text-sm text-gray-600">IT Director, TechCorp Solutions</p>
+              <p className="text-sm text-gray-600">
+                IT Director, TechCorp Solutions
+              </p>
             </div>
             <div className="mt-6 flex items-center justify-center gap-2">
-              <span className="text-sm text-gray-700">Over 700+ Sellers and Recyclers joined</span>
+              <span className="text-sm text-gray-700">
+                Over 700+ Sellers and Recyclers joined
+              </span>
               <div className="flex -space-x-2">
                 <img
                   src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
@@ -180,7 +189,9 @@ export default function Signup() {
 
           {/* Right Column - Form */}
           <div>
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">Create An account</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-6">
+              Create An account
+            </h1>
 
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Full Name */}
@@ -219,7 +230,9 @@ export default function Signup() {
                   }`}
                 />
                 {touched.companyName && errors.companyName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.companyName}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.companyName}
+                  </p>
                 )}
               </div>
 
@@ -279,9 +292,14 @@ export default function Signup() {
                   }`}
                 />
                 {touched.confirmPassword && errors.confirmPassword && (
-                  <p className="text-red-500 text-sm mt-1">{errors.confirmPassword}</p>
+                  <p className="text-red-500 text-sm mt-1">
+                    {errors.confirmPassword}
+                  </p>
                 )}
-                <p className="text-gray-600 text-sm mt-1">Password must be at least 8 character including numbers and special characters</p>
+                <p className="text-gray-600 text-sm mt-1">
+                  Password must be at least 8 character including numbers and
+                  special characters
+                </p>
               </div>
 
               {/* Submit Button */}
@@ -318,7 +336,15 @@ export default function Signup() {
             <div className="mt-6 text-center">
               <p className="text-gray-600 text-sm mb-2">
                 <input type="checkbox" className="mr-2" />
-                By signing up, I agree to the <a href="#" className="text-gray-900 underline">Terms and Conditions</a> and <a href="#" className="text-gray-900 underline">Privacy Policy</a>.
+                By signing up, I agree to the{" "}
+                <a href="#" className="text-gray-900 underline">
+                  Terms and Conditions
+                </a>{" "}
+                and{" "}
+                <a href="#" className="text-gray-900 underline">
+                  Privacy Policy
+                </a>
+                .
               </p>
               <p className="text-gray-600 text-sm">
                 Already Have an Account?{" "}

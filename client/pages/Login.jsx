@@ -110,14 +110,21 @@ export default function Login() {
               />
             </div>
             <p className="text-gray-700 mb-6 leading-relaxed text-center">
-              "Ever since I started using this platform, submitting my LOTs has become effortless, and I finally feel confident knowing every step—from verification to payment—is recorded, secure, and completely visible to me"
+              "Ever since I started using this platform, submitting my LOTs has
+              become effortless, and I finally feel confident knowing every
+              step—from verification to payment—is recorded, secure, and
+              completely visible to me"
             </p>
             <div className="text-center">
               <p className="font-semibold text-gray-900">Michael Chen</p>
-              <p className="text-sm text-gray-600">IT Director, TechCorp Solutions</p>
+              <p className="text-sm text-gray-600">
+                IT Director, TechCorp Solutions
+              </p>
             </div>
             <div className="mt-6 flex items-center justify-center gap-2">
-              <span className="text-sm text-gray-700">Over 700+ Sellers and Recyclers joined</span>
+              <span className="text-sm text-gray-700">
+                Over 700+ Sellers and Recyclers joined
+              </span>
               <div className="flex -space-x-2">
                 <img
                   src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
@@ -181,10 +188,16 @@ export default function Login() {
               {/* Remember Me & Forgot Password */}
               <div className="flex items-center justify-between">
                 <label className="flex items-center gap-2">
-                  <input type="checkbox" className="w-4 h-4 rounded border-green-300" />
+                  <input
+                    type="checkbox"
+                    className="w-4 h-4 rounded border-green-300"
+                  />
                   <span className="text-gray-700 text-sm">Remember Me</span>
                 </label>
-                <a href="#" className="text-green-600 hover:text-green-700 text-sm font-semibold">
+                <a
+                  href="#"
+                  className="text-green-600 hover:text-green-700 text-sm font-semibold"
+                >
                   Forgotten password?
                 </a>
               </div>
@@ -223,7 +236,15 @@ export default function Login() {
             <div className="mt-6 text-center">
               <p className="text-gray-600 text-sm">
                 <input type="checkbox" className="mr-2" />
-                By signing up, I agree to the <a href="#" className="text-gray-900 underline">Terms and Conditions</a> and <a href="#" className="text-gray-900 underline">Privacy Policy</a>.
+                By signing up, I agree to the{" "}
+                <a href="#" className="text-gray-900 underline">
+                  Terms and Conditions
+                </a>{" "}
+                and{" "}
+                <a href="#" className="text-gray-900 underline">
+                  Privacy Policy
+                </a>
+                .
               </p>
             </div>
 

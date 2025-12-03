@@ -28,8 +28,12 @@ export default function RoleSelection() {
       {/* Main Content */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">Choose Your Role</h1>
-          <p className="text-lg text-gray-600">Start by choosing how you want to participate</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-3">
+            Choose Your Role
+          </h1>
+          <p className="text-lg text-gray-600">
+            Start by choosing how you want to participate
+          </p>
         </div>
 
         {/* Role Cards */}
@@ -50,7 +54,9 @@ export default function RoleSelection() {
             />
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Seller</h3>
-              <p className="text-gray-600 mb-4">List your e-waste and connect with verified recyclers</p>
+              <p className="text-gray-600 mb-4">
+                List your e-waste and connect with verified recyclers
+              </p>
               <Button className="w-full bg-green-100 text-green-700 hover:bg-green-200 border border-green-300">
                 Seller
               </Button>
@@ -73,7 +79,9 @@ export default function RoleSelection() {
             />
             <div className="p-6">
               <h3 className="text-xl font-bold text-gray-900 mb-2">Recycler</h3>
-              <p className="text-gray-600 mb-4">Connect with technicians and grow your recycling network</p>
+              <p className="text-gray-600 mb-4">
+                Connect with technicians and grow your recycling network
+              </p>
               <Button className="w-full bg-green-100 text-green-700 hover:bg-green-200 border border-green-300">
                 Recycler
               </Button>

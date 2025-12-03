@@ -20,8 +20,10 @@ export default function Hero() {
               sustainable solutions
             </h1>
             <p className="text-lg text-white mb-8 leading-relaxed">
-              Streamline e-waste management with our innovative platform. Technicians and admins <br />
-              can easily track, verify, and process waste for responsible recycling.
+              Streamline e-waste management with our innovative platform.
+              Technicians and admins <br />
+              can easily track, verify, and process waste for responsible
+              recycling.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Button
@@ -38,8 +40,6 @@ export default function Hero() {
               </Button>
             </div>
           </div>
-
-
         </div>
       </div>
     </section>
