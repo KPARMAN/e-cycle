@@ -128,7 +128,7 @@ export default function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      navigate("/auth/login");
+      navigate("/dashboard");
     }
   };
 
