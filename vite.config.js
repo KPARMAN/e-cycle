@@ -5,6 +5,7 @@ import { createServer } from "./server/index.js";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
+  appType: "spa",
   server: {
     host: "::",
     port: 8080,
@@ -32,7 +33,9 @@ function expressPlugin() {
     configureServer(server) {
       const app = createServer();
 
-      server.middlewares.use(app);
+      // Mount Express app only for API routes (/api/*)
+      // This prevents Express from intercepting SPA routes like /dashboard
+      server.middlewares.use("/api", app);
     },
   };
 }
