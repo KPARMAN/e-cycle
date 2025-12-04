@@ -23,12 +23,23 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
-  // Serve static files from dist
-  app.use(express.static(path.join(__dirname, "../dist/spa")));
+  // Serve static files from dist (production only)
+  const distPath = path.join(__dirname, "../dist/spa");
+  try {
+    app.use(express.static(distPath));
+  } catch (e) {
+    // Static files not available in dev mode
+  }
 
-  // SPA catch-all: serve index.html for all non-API routes
+  // SPA catch-all: serve index.html for all non-API routes (production only)
   app.use((_req, res) => {
-    res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
+    const indexPath = path.join(__dirname, "../dist/spa/index.html");
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        // In dev mode, Vite handles routing, so this shouldn't be reached
+        res.status(404).send("Not found");
+      }
+    });
   });
 
   return app;
