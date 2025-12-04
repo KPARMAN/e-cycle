@@ -80,8 +80,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validateForm()) {
-      // Just navigate to home as per "just ui route" requirement
-      navigate("/");
+      navigate("/dashboard");
     }
   };
 
