@@ -27,7 +27,7 @@ export function createServer() {
   app.use(express.static(path.join(__dirname, "../dist/spa")));
 
   // SPA catch-all: serve index.html for all non-API routes
-  app.get("*", (_req, res) => {
+  app.use((_req, res) => {
     res.sendFile(path.join(__dirname, "../dist/spa/index.html"));
   });
 
