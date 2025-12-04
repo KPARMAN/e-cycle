@@ -32,7 +32,18 @@ function expressPlugin() {
     configureServer(server) {
       const app = createServer();
 
-      server.middlewares.use(app);
+      // Only mount the Express app for API routes
+      server.middlewares.use("/api", app);
+
+      // Return middleware to handle SPA routing
+      return () => {
+        server.middlewares.use((req, res, next) => {
+          // If not handled by previous middleware and not a static file, let Vite serve index.html
+          if (!res.headersSent) {
+            next();
+          }
+        });
+      };
     },
   };
 }
