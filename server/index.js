@@ -19,10 +19,5 @@ export function createServer() {
 
   app.get("/api/demo", handleDemo);
 
-  // Catch-all route for client-side routing - must be last
-  app.get(/^\/(?!api\/).*$/, (_req, res) => {
-    res.sendFile(new URL("../index.html", import.meta.url).pathname);
-  });
-
   return app;
 }
