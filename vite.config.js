@@ -33,8 +33,9 @@ function expressPlugin() {
     configureServer(server) {
       const app = createServer();
 
-      // Mount Express app first to handle API routes
-      server.middlewares.use(app);
+      // Mount Express app only for API routes (/api/*)
+      // This prevents Express from intercepting SPA routes like /dashboard
+      server.middlewares.use("/api", app);
     },
   };
 }
