@@ -189,33 +189,33 @@ export default function Dashboard() {
 
           {/* Action Cards */}
           <div className="mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 flex flex-col justify-between">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Value My E-Waste
                   </h4>
-                  <p className="text-gray-700 text-sm">
+                  <p className="text-gray-700 text-xs sm:text-sm">
                     Get an instant valuation of your electronic waste items
                   </p>
                 </div>
-                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4">
+                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4 text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6">
                   Get Valuation
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 flex flex-col justify-between">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Manage Listings
                   </h4>
-                  <p className="text-gray-700 text-sm">
+                  <p className="text-gray-700 text-xs sm:text-sm">
                     Edit, update, or remove your existing listings
                   </p>
                 </div>
                 <Button
                   onClick={() => navigate("/dashboard/manage-listings")}
-                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4"
+                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4 text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6"
                 >
                   Manage Now
                 </Button>
