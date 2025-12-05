@@ -2,7 +2,8 @@ const stories = [
   {
     name: "Michael Chen",
     role: "Operations Director",
-    quote: "E-Cycle has transformed how we manage our electronic waste. We've reduced processing time by 60% and improved compliance tracking significantly.",
+    quote:
+      "E-Cycle has transformed how we manage our electronic waste. We've reduced processing time by 60% and improved compliance tracking significantly.",
     rating: 5,
     initials: "MC",
   },
@@ -10,7 +11,8 @@ const stories = [
     name: "James Chen",
     company: "EcoRecycle Inc",
     role: "Operations Manager, GreenTech Innovations",
-    quote: "The platform's AI insights have helped us identify new revenue streams from e-waste recovery. Highly recommended for any organization serious about sustainability.",
+    quote:
+      "The platform's AI insights have helped us identify new revenue streams from e-waste recovery. Highly recommended for any organization serious about sustainability.",
     rating: 4,
     initials: "SR",
   },
@@ -18,7 +20,8 @@ const stories = [
     name: "David Kim",
     company: "Digital Waste Corp",
     role: "CEO",
-    quote: "Outstanding solution for e-waste management. The automated workflows have freed up our team to focus on strategic initiatives. ROI was achieved within 6 months.",
+    quote:
+      "Outstanding solution for e-waste management. The automated workflows have freed up our team to focus on strategic initiatives. ROI was achieved within 6 months.",
     rating: 5,
     initials: "DK",
   },
@@ -35,7 +38,9 @@ export default function CustomerStories() {
               Customer stories
             </h2>
             <p className="text-lg text-muted-foreground">
-              See how businesses are transforming their e-waste management with our innovative platform. Real results from real organizations driving sustainable change.
+              See how businesses are transforming their e-waste management with
+              our innovative platform. Real results from real organizations
+              driving sustainable change.
             </p>
           </div>
 
@@ -62,9 +67,7 @@ export default function CustomerStories() {
                   </span>
                 ))}
               </div>
-              <p className="text-base leading-relaxed mb-8">
-                "{story.quote}"
-              </p>
+              <p className="text-base leading-relaxed mb-8">"{story.quote}"</p>
               <div className="flex items-center gap-4">
                 <div className="w-12 h-12 bg-primary rounded-full flex items-center justify-center">
                   <span className="text-white font-semibold text-sm">

@@ -41,11 +41,17 @@ const App = () => (
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/dashboard/notifications" element={<Notifications />} />
           <Route path="/dashboard/add-listings" element={<AddListings />} />
-          <Route path="/dashboard/manage-listings" element={<ManageListings />} />
+          <Route
+            path="/dashboard/manage-listings"
+            element={<ManageListings />}
+          />
           <Route path="/dashboard/profile" element={<Profile />} />
           <Route path="/dashboard/settings" element={<Settings />} />
           <Route path="/dashboard/messages" element={<Messages />} />
-          <Route path="/dashboard/explore-listing" element={<ExploreListing />} />
+          <Route
+            path="/dashboard/explore-listing"
+            element={<ExploreListing />}
+          />
           <Route path="/dashboard/inventory" element={<Inventory />} />
           <Route path="/dashboard/listings" element={<Listings />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

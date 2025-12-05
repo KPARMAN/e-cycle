@@ -9,22 +9,26 @@ export default function AboutUs() {
   const values = [
     {
       title: "Sustainability",
-      description: "We are committed to promoting environmental sustainability through responsible e-waste management and material recovery.",
+      description:
+        "We are committed to promoting environmental sustainability through responsible e-waste management and material recovery.",
       icon: "🌍",
     },
     {
       title: "Transparency",
-      description: "Complete visibility into every step of the e-waste lifecycle. We believe in honest communication and detailed reporting.",
+      description:
+        "Complete visibility into every step of the e-waste lifecycle. We believe in honest communication and detailed reporting.",
       icon: "👁️",
     },
     {
       title: "Innovation",
-      description: "Leveraging cutting-edge technology and AI to optimize e-waste management processes and maximize material recovery.",
+      description:
+        "Leveraging cutting-edge technology and AI to optimize e-waste management processes and maximize material recovery.",
       icon: "💡",
     },
     {
       title: "Integrity",
-      description: "Operating with the highest ethical standards in compliance with all environmental regulations and certifications.",
+      description:
+        "Operating with the highest ethical standards in compliance with all environmental regulations and certifications.",
       icon: "✨",
     },
   ];
@@ -47,7 +51,8 @@ export default function AboutUs() {
               About E-Cycle
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Transforming e-waste management in Africa through innovative technology and sustainable practices.
+              Transforming e-waste management in Africa through innovative
+              technology and sustainable practices.
             </p>
           </div>
         </section>
@@ -55,12 +60,20 @@ export default function AboutUs() {
         {/* Mission Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">Our Mission</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Our Mission
+            </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              E-Cycle is dedicated to revolutionizing e-waste management across Africa. We provide comprehensive solutions that connect waste generators with certified recycling partners, ensuring responsible handling of electronic waste while maximizing material recovery and environmental protection.
+              E-Cycle is dedicated to revolutionizing e-waste management across
+              Africa. We provide comprehensive solutions that connect waste
+              generators with certified recycling partners, ensuring responsible
+              handling of electronic waste while maximizing material recovery
+              and environmental protection.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Our platform brings transparency, efficiency, and sustainability to the entire e-waste lifecycle—from collection and assessment to secure recycling and compliance tracking.
+              Our platform brings transparency, efficiency, and sustainability
+              to the entire e-waste lifecycle—from collection and assessment to
+              secure recycling and compliance tracking.
             </p>
           </div>
         </section>

@@ -20,9 +20,14 @@ export default function Streamline() {
               Streamline your e-waste management
             </h2>
             <p className="text-lg text-muted-foreground mb-10 leading-relaxed">
-              Our platform simplifies complex e-waste management processes, giving you complete visibility and control over your electronic waste lifecycle from collection to responsible recycling.
+              Our platform simplifies complex e-waste management processes,
+              giving you complete visibility and control over your electronic
+              waste lifecycle from collection to responsible recycling.
             </p>
-            <Button variant="outline" className="text-base px-8 py-6 rounded-lg border-gray-300">
+            <Button
+              variant="outline"
+              className="text-base px-8 py-6 rounded-lg border-gray-300"
+            >
               Explore
             </Button>
           </div>

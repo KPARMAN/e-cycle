@@ -20,7 +20,10 @@ export default function Benefits() {
               Benefits of our platform
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Reduce operational waste management costs by up to 40%, improve compliance tracking, minimize environmental impact, and enhance your brand reputation with our comprehensive e-waste management platform.
+              Reduce operational waste management costs by up to 40%, improve
+              compliance tracking, minimize environmental impact, and enhance
+              your brand reputation with our comprehensive e-waste management
+              platform.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg">

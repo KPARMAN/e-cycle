@@ -32,7 +32,8 @@ export default function Contact() {
               Contact Us
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Have questions about our e-waste management solutions? We'd love to hear from you.
+              Have questions about our e-waste management solutions? We'd love
+              to hear from you.
             </p>
           </div>
         </section>
@@ -52,8 +53,10 @@ export default function Contact() {
                     📍 Location
                   </h3>
                   <p className="text-gray-600">
-                    E-Cycle Africa<br />
-                    Innovative Tech Hub<br />
+                    E-Cycle Africa
+                    <br />
+                    Innovative Tech Hub
+                    <br />
                     Lagos, Nigeria
                   </p>
                 </div>
@@ -91,8 +94,10 @@ export default function Contact() {
                     ⏰ Business Hours
                   </h3>
                   <p className="text-gray-600">
-                    Monday - Friday: 9:00 AM - 6:00 PM<br />
-                    Saturday: 10:00 AM - 4:00 PM<br />
+                    Monday - Friday: 9:00 AM - 6:00 PM
+                    <br />
+                    Saturday: 10:00 AM - 4:00 PM
+                    <br />
                     Sunday: Closed
                   </p>
                 </div>
@@ -107,7 +112,8 @@ export default function Contact() {
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
                     <p className="text-green-700 font-semibold">
-                      ✓ Thank you! We've received your message and will get back to you soon.
+                      ✓ Thank you! We've received your message and will get back
+                      to you soon.
                     </p>
                   </div>
                 )}
@@ -123,7 +129,10 @@ export default function Contact() {
 
                   {/* Name */}
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-900 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -139,7 +148,10 @@ export default function Contact() {
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-semibold text-gray-900 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -155,7 +167,10 @@ export default function Contact() {
 
                   {/* Company */}
                   <div>
-                    <label htmlFor="company" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label
+                      htmlFor="company"
+                      className="block text-sm font-semibold text-gray-900 mb-2"
+                    >
                       Company Name
                     </label>
                     <input
@@ -170,7 +185,10 @@ export default function Contact() {
 
                   {/* Subject */}
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label
+                      htmlFor="subject"
+                      className="block text-sm font-semibold text-gray-900 mb-2"
+                    >
                       Subject *
                     </label>
                     <input
@@ -186,7 +204,10 @@ export default function Contact() {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-900 mb-2">
+                    <label
+                      htmlFor="message"
+                      className="block text-sm font-semibold text-gray-900 mb-2"
+                    >
                       Message *
                     </label>
                     <textarea
@@ -230,7 +251,8 @@ export default function Contact() {
                   What is the typical response time?
                 </h3>
                 <p className="text-gray-600">
-                  We aim to respond to all inquiries within 24 business hours. For urgent matters, please call us directly.
+                  We aim to respond to all inquiries within 24 business hours.
+                  For urgent matters, please call us directly.
                 </p>
               </div>
 
@@ -239,7 +261,8 @@ export default function Contact() {
                   Do you offer support for organizations outside Nigeria?
                 </h3>
                 <p className="text-gray-600">
-                  Yes, we serve organizations across Africa. Contact us to discuss your specific location and needs.
+                  Yes, we serve organizations across Africa. Contact us to
+                  discuss your specific location and needs.
                 </p>
               </div>
 
@@ -248,7 +271,9 @@ export default function Contact() {
                   How can I schedule a consultation?
                 </h3>
                 <p className="text-gray-600">
-                  You can request a consultation through this contact form, and our team will reach out to schedule a meeting at your convenience.
+                  You can request a consultation through this contact form, and
+                  our team will reach out to schedule a meeting at your
+                  convenience.
                 </p>
               </div>
 
@@ -257,7 +282,9 @@ export default function Contact() {
                   What payment methods do you accept?
                 </h3>
                 <p className="text-gray-600">
-                  We accept various payment methods including bank transfers, credit cards, and other digital payment options. Details will be provided during your consultation.
+                  We accept various payment methods including bank transfers,
+                  credit cards, and other digital payment options. Details will
+                  be provided during your consultation.
                 </p>
               </div>
             </div>

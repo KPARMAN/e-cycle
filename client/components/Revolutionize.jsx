@@ -11,7 +11,7 @@ export default function Revolutionize() {
               Revolutionize your <br /> e-waste management
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-             Transform complex waste into simple streamlined experience
+              Transform complex waste into simple streamlined experience
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg">

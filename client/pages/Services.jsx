@@ -9,32 +9,38 @@ export default function Services() {
   const services = [
     {
       title: "E-Waste Collection",
-      description: "We provide efficient and safe collection of electronic waste from your organization. Our team ensures proper handling and transportation of all e-waste materials.",
+      description:
+        "We provide efficient and safe collection of electronic waste from your organization. Our team ensures proper handling and transportation of all e-waste materials.",
       icon: "📦",
     },
     {
       title: "Waste Assessment & Categorization",
-      description: "Comprehensive analysis and categorization of your electronic waste streams. We identify valuable materials and create detailed reports for compliance tracking.",
+      description:
+        "Comprehensive analysis and categorization of your electronic waste streams. We identify valuable materials and create detailed reports for compliance tracking.",
       icon: "📊",
     },
     {
       title: "Recycling & Recovery",
-      description: "Advanced recycling processes that recover valuable materials from e-waste. We maximize material recovery while ensuring environmental responsibility.",
+      description:
+        "Advanced recycling processes that recover valuable materials from e-waste. We maximize material recovery while ensuring environmental responsibility.",
       icon: "♻️",
     },
     {
       title: "Certification & Compliance",
-      description: "Full compliance documentation and certification for all recycling activities. We ensure your organization meets all regulatory requirements.",
+      description:
+        "Full compliance documentation and certification for all recycling activities. We ensure your organization meets all regulatory requirements.",
       icon: "✓",
     },
     {
       title: "Platform Management",
-      description: "Our intuitive E-Cycle platform provides real-time tracking, inventory management, and analytics for your e-waste operations.",
+      description:
+        "Our intuitive E-Cycle platform provides real-time tracking, inventory management, and analytics for your e-waste operations.",
       icon: "💻",
     },
     {
       title: "Consultation & Support",
-      description: "Expert consultation to optimize your e-waste management strategy. Our team provides ongoing support to maximize efficiency and sustainability.",
+      description:
+        "Expert consultation to optimize your e-waste management strategy. Our team provides ongoing support to maximize efficiency and sustainability.",
       icon: "🤝",
     },
   ];
@@ -57,7 +63,9 @@ export default function Services() {
               Our Services
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Comprehensive e-waste management solutions designed to help your organization achieve sustainability goals while maximizing efficiency and compliance.
+              Comprehensive e-waste management solutions designed to help your
+              organization achieve sustainability goals while maximizing
+              efficiency and compliance.
             </p>
           </div>
         </section>
@@ -91,7 +99,8 @@ export default function Services() {
               Ready to optimize your e-waste management?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Contact our team to learn more about how we can support your organization.
+              Contact our team to learn more about how we can support your
+              organization.
             </p>
             <Button
               onClick={() => navigate("/contact")}
