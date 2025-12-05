@@ -18,30 +18,30 @@ export default function Header() {
         {/* nav links */}
         <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden sm:flex">
           <div className="flex items-center gap-6">
-            <a
-              href="#home"
+            <Link
+              to="/"
               className="text-sm text-foreground hover:text-primary transition-colors text-black"
             >
               Home
-            </a>
-            <a
-              href="#services"
+            </Link>
+            <Link
+              to="/services"
               className="text-sm text-foreground hover:text-primary transition-colors text-black"
             >
               Services
-            </a>
-            <a
-              href="#about"
+            </Link>
+            <Link
+              to="/about"
               className="text-sm text-foreground hover:text-primary transition-colors text-black"
             >
               About us
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              to="/contact"
               className="text-sm text-foreground hover:text-primary transition-colors text-black"
             >
               Contact us
-            </a>
+            </Link>
           </div>
         </div>
 
