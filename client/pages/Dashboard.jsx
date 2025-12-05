@@ -122,12 +122,12 @@ export default function Dashboard() {
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-gray-600 text-sm font-medium">
+                    <p className="text-gray-600 text-xs sm:text-sm font-medium">
                       Active listings
                     </p>
-                    <p className="text-4xl font-bold text-gray-900 mt-2">288</p>
+                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">288</p>
                   </div>
-                  <MapPin className="text-black w-12 h-12" />
+                  <MapPin className="text-black w-8 h-8 sm:w-12 sm:h-12" />
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
