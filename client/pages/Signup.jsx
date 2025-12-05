@@ -135,20 +135,20 @@ export default function Signup() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
       {/* Header */}
-      <div className="flex items-center justify-center pt-6 pb-8">
+      <div className="flex items-center justify-center pt-4 sm:pt-6 pb-6 sm:pb-8">
         <div className="flex items-center gap-2">
           <div className="bg-green-600 p-2 rounded-lg">
-            <RecycleIcon className="w-6 h-6 text-white" />
+            <RecycleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
-          <span className="text-xl font-semibold text-gray-800">E-Cycle</span>
+          <span className="text-lg sm:text-xl font-semibold text-gray-800">E-Cycle</span>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left Column - Testimonial */}
-          <div className="bg-green-100 rounded-2xl p-8 flex flex-col justify-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          {/* Left Column - Testimonial (Hidden on mobile) */}
+          <div className="hidden lg:flex bg-green-100 rounded-2xl p-8 flex-col justify-center">
             <div className="mb-6">
               <img
                 src="https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg"
@@ -188,15 +188,15 @@ export default function Signup() {
           </div>
 
           {/* Right Column - Form */}
-          <div>
+          <div className="w-full">
             <Button
               onClick={() => navigate("/")}
-              className="mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors"
+              className="mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors text-sm"
               aria-label="Go back to home page"
             >
               ← Back to Home
             </Button>
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
               Create An account
             </h1>
 
