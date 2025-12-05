@@ -102,19 +102,19 @@ export default function Messages() {
           {/* Chats Sidebar */}
           <div className="w-full md:w-80 bg-white border-r border-gray-200 flex flex-col overflow-hidden md:border-b-0 border-b">
             {/* Chats Header */}
-            <div className="p-6 border-b border-gray-200">
+            <div className="p-4 sm:p-6 border-b border-gray-200">
               <div className="flex gap-4 mb-4">
-                <button className="px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-green-600">
+                <button className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-900 border-b-2 border-green-600">
                   Chats
                 </button>
-                <button className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">
+                <button className="px-4 py-2 text-xs sm:text-sm font-medium text-gray-600 hover:text-gray-900">
                   Groups
                 </button>
               </div>
               <input
                 type="text"
                 placeholder="search"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
+                className="w-full px-4 py-2 text-sm border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
 
