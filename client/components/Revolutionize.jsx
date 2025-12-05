@@ -20,16 +20,13 @@ export default function Revolutionize() {
             </div>
           </div>
 
-          {/* Right side - Illustration */}
-          <div className="relative h-80 lg:h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-200 via-cyan-200 to-green-200 rounded-3xl opacity-60"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-emerald-100 to-transparent rounded-3xl opacity-40"></div>
-            <div className="relative h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4"></div>
-                <p className="text-sm font-semibold text-gray-700">Sustainable Future</p>
-              </div>
-            </div>
+          {/* Right side - Image */}
+          <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.pexels.com/photos/34406295/pexels-photo-34406295.jpeg"
+              alt="Workers handling waste disposal in an urban environment on a sunny day"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>

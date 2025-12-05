@@ -5,16 +5,13 @@ export default function Benefits() {
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left side - Illustration */}
-          <div className="order-2 lg:order-1 relative h-80 lg:h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-100 via-cyan-100 to-teal-100 rounded-3xl opacity-60"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-emerald-50 to-transparent rounded-3xl opacity-40"></div>
-            <div className="relative h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4"></div>
-                <p className="text-sm font-semibold text-gray-700">Cost Reduction</p>
-              </div>
-            </div>
+          {/* Left side - Image */}
+          <div className="order-2 lg:order-1 relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.pexels.com/photos/6990475/pexels-photo-6990475.jpeg"
+              alt="Young woman exploring renewable energy with a globe and wind turbine model"
+              className="w-full h-full object-cover"
+            />
           </div>
 
           {/* Right side - Text */}
