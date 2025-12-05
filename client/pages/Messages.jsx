@@ -100,10 +100,17 @@ export default function Messages() {
           <div className="w-80 bg-white border-r border-gray-200 flex flex-col overflow-hidden">
             {/* Chats Header */}
             <div className="p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Messages</h2>
+              <div className="flex gap-4 mb-4">
+                <button className="px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-green-600">
+                  Chats
+                </button>
+                <button className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">
+                  Groups
+                </button>
+              </div>
               <input
                 type="text"
-                placeholder="Search messages..."
+                placeholder="search"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
