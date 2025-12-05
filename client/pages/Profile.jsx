@@ -52,7 +52,7 @@ export default function Profile() {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm">
+            <div className="bg-green-50 rounded-lg p-8 shadow-sm">
               {/* Profile Picture */}
               <div className="flex items-center gap-6 mb-8 pb-8 border-b border-gray-200">
                 <div className="relative">
@@ -95,7 +95,7 @@ export default function Profile() {
                       value={profileData.firstName}
                       onChange={handleChange}
                       disabled={!isEditing}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                     />
                   </div>
 
@@ -109,7 +109,7 @@ export default function Profile() {
                       value={profileData.lastName}
                       onChange={handleChange}
                       disabled={!isEditing}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                     />
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function Profile() {
                     value={profileData.email}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
@@ -138,27 +138,13 @@ export default function Profile() {
                     value={profileData.phone}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={profileData.company}
-                    onChange={handleChange}
-                    disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Location
+                    Country
                   </label>
                   <input
                     type="text"
@@ -166,22 +152,31 @@ export default function Profile() {
                     value={profileData.location}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Bio
+                    City
                   </label>
-                  <textarea
-                    name="bio"
-                    value={profileData.bio}
+                  <input
+                    type="text"
+                    name="company"
+                    value={profileData.company}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    rows="4"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
-                  ></textarea>
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
+                    Role
+                  </label>
+                  <div className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-green-200 text-gray-900">
+                    E waste seller
+                  </div>
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-gray-200">
