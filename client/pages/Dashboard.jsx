@@ -44,26 +44,26 @@ export default function Dashboard() {
     {
       id: 1,
       icon: BarChart3,
-      label: "Total Listings",
-      value: "2,548",
+      label: "Active recyclers",
+      value: "8",
       color: "bg-green-50",
       iconColor: "text-green-600",
     },
     {
       id: 2,
       icon: Package,
-      label: "Active Items",
-      value: "1,234",
-      color: "bg-blue-50",
-      iconColor: "text-blue-600",
+      label: "Listing views",
+      value: "8",
+      color: "bg-green-50",
+      iconColor: "text-green-600",
     },
     {
       id: 3,
       icon: TrendingUp,
-      label: "Total Value",
-      value: "$12,456",
-      color: "bg-purple-50",
-      iconColor: "text-purple-600",
+      label: "Waste listed",
+      value: "8",
+      color: "bg-green-50",
+      iconColor: "text-green-600",
     },
   ];
 
@@ -120,26 +120,26 @@ export default function Dashboard() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm font-medium">
-                      Active Listings
+                      Active listings
                     </p>
-                    <p className="text-4xl font-bold text-green-600 mt-2">
-                      268
+                    <p className="text-4xl font-bold text-gray-900 mt-2">
+                      288
                     </p>
                   </div>
-                  <MapPin className="text-green-600 w-12 h-12" />
+                  <MapPin className="text-black w-12 h-12" />
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm font-medium">
-                      Expired Listings
+                      Expired listings
                     </p>
-                    <p className="text-4xl font-bold text-orange-600 mt-2">
-                      268
+                    <p className="text-4xl font-bold text-gray-900 mt-2">
+                      288
                     </p>
                   </div>
-                  <Clock className="text-orange-600 w-12 h-12" />
+                  <Clock className="text-black w-12 h-12" />
                 </div>
               </div>
             </div>
