@@ -115,9 +115,9 @@ export default function Login() {
               completely visible to me"
             </p>
             <div className="text-center">
-              <p className="font-semibold text-gray-900">Michael Chen</p>
+              <p className="font-semibold text-gray-900">Olawale Ogunmola</p>
               <p className="text-sm text-gray-600">
-                IT Director, TechCorp Solutions
+                IT Director, Tech Solutions Nigeria
               </p>
             </div>
             <div className="mt-6 flex items-center justify-center gap-2">
