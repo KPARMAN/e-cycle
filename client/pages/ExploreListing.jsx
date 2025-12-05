@@ -29,7 +29,8 @@ export default function ExploreListing() {
       category: "Computers",
       seller: "Alex Chen",
       location: "New York, NY",
-      image: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg",
+      image:
+        "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg",
       rating: 4.5,
       condition: "Good",
     },
@@ -51,7 +52,8 @@ export default function ExploreListing() {
       category: "Electronics",
       seller: "John Smith",
       location: "Chicago, IL",
-      image: "https://images.pexels.com/photos/16217559/pexels-photo-16217559.jpeg",
+      image:
+        "https://images.pexels.com/photos/16217559/pexels-photo-16217559.jpeg",
       rating: 4.6,
       condition: "Good",
     },
@@ -62,7 +64,8 @@ export default function ExploreListing() {
       category: "Electronics",
       seller: "Emily Brown",
       location: "Boston, MA",
-      image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+      image:
+        "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
       rating: 4.7,
       condition: "Like New",
     },
@@ -73,7 +76,8 @@ export default function ExploreListing() {
       category: "Computers",
       seller: "David Lee",
       location: "Seattle, WA",
-      image: "https://images.pexels.com/photos/8348756/pexels-photo-8348756.jpeg",
+      image:
+        "https://images.pexels.com/photos/8348756/pexels-photo-8348756.jpeg",
       rating: 4.8,
       condition: "Excellent",
     },
@@ -90,7 +94,7 @@ export default function ExploreListing() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -197,7 +201,9 @@ export default function ExploreListing() {
                   >
                     <Heart
                       className="w-5 h-5"
-                      fill={favorites.includes(listing.id) ? "currentColor" : "none"}
+                      fill={
+                        favorites.includes(listing.id) ? "currentColor" : "none"
+                      }
                     />
                   </button>
                   <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">

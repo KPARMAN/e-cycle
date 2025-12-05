@@ -91,7 +91,7 @@ export default function Notifications() {
                 <div
                   key={notification.id}
                   className={`${getNotificationColor(
-                    notification.type
+                    notification.type,
                   )} border rounded-lg p-4 flex items-start justify-between hover:shadow-md transition-shadow`}
                 >
                   <div className="flex-1">

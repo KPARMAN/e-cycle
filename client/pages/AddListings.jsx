@@ -84,8 +84,15 @@ export default function AddListings() {
                   <label className="block text-sm font-medium text-gray-900 mb-2">
                     Add description
                   </label>
-                  <button type="button" className="text-green-600 hover:text-green-700 mb-4">
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <button
+                    type="button"
+                    className="text-green-600 hover:text-green-700 mb-4"
+                  >
+                    <svg
+                      className="w-5 h-5"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M11 19a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L11 10.586 9.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
                     </svg>
                   </button>
@@ -126,7 +133,9 @@ export default function AddListings() {
 
           {/* Current Inventory List */}
           <div className="mb-8">
-            <h3 className="text-lg font-bold text-gray-900 mb-4">Current Inventory List</h3>
+            <h3 className="text-lg font-bold text-gray-900 mb-4">
+              Current Inventory List
+            </h3>
             <p className="text-gray-600 text-sm mb-4">3 Items added</p>
 
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
@@ -149,7 +158,10 @@ export default function AddListings() {
                 </thead>
                 <tbody className="divide-y divide-gray-200">
                   {inventoryItems.map((item) => (
-                    <tr key={item.id} className="hover:bg-gray-50 transition-colors">
+                    <tr
+                      key={item.id}
+                      className="hover:bg-gray-50 transition-colors"
+                    >
                       <td className="px-6 py-4 text-sm text-gray-900">
                         {item.category}
                       </td>

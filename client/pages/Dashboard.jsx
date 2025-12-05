@@ -20,21 +20,24 @@ export default function Dashboard() {
     {
       id: 1,
       user: "Sarah Johnson",
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
       action: "Listed 24 items for recycling",
       time: "2 hours ago",
     },
     {
       id: 2,
       user: "Alex Chen",
-      avatar: "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
       action: "Completed transaction with value $450",
       time: "5 hours ago",
     },
     {
       id: 3,
       user: "Maria Garcia",
-      avatar: "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
       action: "Updated inventory status",
       time: "1 day ago",
     },
@@ -122,9 +125,7 @@ export default function Dashboard() {
                     <p className="text-gray-600 text-sm font-medium">
                       Active listings
                     </p>
-                    <p className="text-4xl font-bold text-gray-900 mt-2">
-                      288
-                    </p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">288</p>
                   </div>
                   <MapPin className="text-black w-12 h-12" />
                 </div>
@@ -135,9 +136,7 @@ export default function Dashboard() {
                     <p className="text-gray-600 text-sm font-medium">
                       Expired listings
                     </p>
-                    <p className="text-4xl font-bold text-gray-900 mt-2">
-                      288
-                    </p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">288</p>
                   </div>
                   <Clock className="text-black w-12 h-12" />
                 </div>
@@ -166,9 +165,7 @@ export default function Dashboard() {
                       <p className="font-semibold text-gray-900">
                         {activity.user}
                       </p>
-                      <p className="text-sm text-gray-600">
-                        {activity.action}
-                      </p>
+                      <p className="text-sm text-gray-600">{activity.action}</p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>

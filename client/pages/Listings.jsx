@@ -74,7 +74,7 @@ export default function Listings() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const activeListings = listings.filter((l) => l.status === "Active").length;
@@ -113,7 +113,9 @@ export default function Listings() {
           {/* Summary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">Total Listings</p>
+              <p className="text-gray-600 text-sm font-medium">
+                Total Listings
+              </p>
               <p className="text-3xl font-bold text-gray-900 mt-2">
                 {listings.length}
               </p>
@@ -184,7 +186,7 @@ export default function Listings() {
                     <td className="px-6 py-4 text-sm">
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
-                          listing.status
+                          listing.status,
                         )}`}
                       >
                         {listing.status}

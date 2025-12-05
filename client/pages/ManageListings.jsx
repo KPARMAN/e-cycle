@@ -60,7 +60,7 @@ export default function ManageListings() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -139,7 +139,7 @@ export default function ManageListings() {
                     <td className="px-6 py-4 text-sm">
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
-                          listing.status
+                          listing.status,
                         )}`}
                       >
                         {listing.status}

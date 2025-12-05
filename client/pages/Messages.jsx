@@ -12,7 +12,8 @@ export default function Messages() {
     {
       id: 1,
       name: "Sarah Johnson",
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
       lastMessage: "That sounds great! When can we meet?",
       lastTime: "5 mins ago",
       unread: 2,
@@ -21,7 +22,8 @@ export default function Messages() {
     {
       id: 2,
       name: "Alex Chen",
-      avatar: "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
       lastMessage: "I'm interested in your laptop listing",
       lastTime: "2 hours ago",
       unread: 0,
@@ -30,7 +32,8 @@ export default function Messages() {
     {
       id: 3,
       name: "Maria Garcia",
-      avatar: "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+      avatar:
+        "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
       lastMessage: "Can you provide more details?",
       lastTime: "1 day ago",
       unread: 0,
@@ -193,7 +196,11 @@ export default function Messages() {
                     </div>
                   </div>
                   <button className="text-gray-600 hover:text-gray-900">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <circle cx="12" cy="5" r="2" />
                       <circle cx="12" cy="12" r="2" />
                       <circle cx="12" cy="19" r="2" />
@@ -220,9 +227,7 @@ export default function Messages() {
                         <p className="text-sm">{message.text}</p>
                         <p
                           className={`text-xs mt-1 ${
-                            message.isOwn
-                              ? "text-green-100"
-                              : "text-gray-600"
+                            message.isOwn ? "text-green-100" : "text-gray-600"
                           }`}
                         >
                           {message.time}
