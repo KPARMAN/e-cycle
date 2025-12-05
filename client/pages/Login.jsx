@@ -160,14 +160,14 @@ export default function Login() {
                   value={formData.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm sm:text-base ${
                     touched.email && errors.email
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.email && errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -180,29 +180,29 @@ export default function Login() {
                   value={formData.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm sm:text-base ${
                     touched.password && errors.password
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.password && errors.password && (
-                  <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.password}</p>
                 )}
               </div>
 
               {/* Remember Me & Forgot Password */}
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 text-xs sm:text-sm">
                 <label className="flex items-center gap-2">
                   <input
                     type="checkbox"
                     className="w-4 h-4 rounded border-green-300"
                   />
-                  <span className="text-gray-700 text-sm">Remember Me</span>
+                  <span className="text-gray-700">Remember Me</span>
                 </label>
                 <a
                   href="#"
-                  className="text-green-600 hover:text-green-700 text-sm font-semibold"
+                  className="text-green-600 hover:text-green-700 font-semibold"
                 >
                   Forgotten password?
                 </a>
@@ -211,7 +211,7 @@ export default function Login() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-green-600 text-white hover:bg-green-700 py-3 rounded-lg font-semibold mt-6"
+                className="w-full bg-green-600 text-white hover:bg-green-700 py-2 sm:py-3 rounded-lg font-semibold mt-6 text-sm sm:text-base"
               >
                 Login
               </Button>
@@ -221,18 +221,20 @@ export default function Login() {
             <div className="mt-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex-1 h-px bg-gray-300"></div>
-                <span className="text-gray-600 text-sm">Or Continue With</span>
+                <span className="text-gray-600 text-xs sm:text-sm">Or Continue With</span>
                 <div className="flex-1 h-px bg-gray-300"></div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Apple className="w-5 h-5" />
+              <div className="grid grid-cols-3 gap-2 sm:gap-4">
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2" aria-label="Login with Apple">
+                  <Apple className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="hidden sm:inline text-sm">Apple</span>
                 </Button>
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Mail className="w-5 h-5" />
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2" aria-label="Login with Google">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <span className="hidden sm:inline text-sm">Google</span>
                 </Button>
-                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-3 flex items-center justify-center gap-2">
+                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-2 sm:py-3 flex items-center justify-center text-sm sm:text-base font-bold" aria-label="Login with Facebook">
                   f
                 </Button>
               </div>
@@ -240,7 +242,7 @@ export default function Login() {
 
             {/* Signup Link */}
             <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 <input type="checkbox" className="mr-2" />
                 By signing up, I agree to the{" "}
                 <a href="#" className="text-gray-900 underline">
@@ -255,7 +257,7 @@ export default function Login() {
             </div>
 
             <div className="mt-4 text-center">
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Do not have an Account?{" "}
                 <button
                   onClick={() => navigate("/auth/role-selection")}
