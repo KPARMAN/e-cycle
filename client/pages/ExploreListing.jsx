@@ -18,7 +18,7 @@ export default function ExploreListing() {
       category: "Electronics",
       seller: "Chioma Okafor",
       location: "Lagos",
-      image: "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      image: "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       rating: 4.8,
       condition: "Like New",
     },
@@ -30,7 +30,7 @@ export default function ExploreListing() {
       seller: "Chinedu Nwosu",
       location: "Abuja",
       image:
-        "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg",
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
       rating: 4.5,
       condition: "Good",
     },
@@ -41,7 +41,7 @@ export default function ExploreListing() {
       category: "Mobile Devices",
       seller: "Aisha Bello",
       location: "Port Harcourt",
-      image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg",
+      image: "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       rating: 4.9,
       condition: "Fair",
     },
@@ -53,7 +53,7 @@ export default function ExploreListing() {
       seller: "Tunde Adeyemi",
       location: "Kano",
       image:
-        "https://images.pexels.com/photos/16217559/pexels-photo-16217559.jpeg",
+        "https://images.pexels.com/photos/30730018/pexels-photo-30730018.jpeg",
       rating: 4.6,
       condition: "Good",
     },
@@ -65,7 +65,7 @@ export default function ExploreListing() {
       seller: "Zainab Hassan",
       location: "Ibadan",
       image:
-        "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       rating: 4.7,
       condition: "Like New",
     },
@@ -77,7 +77,7 @@ export default function ExploreListing() {
       seller: "Ikechukwu Eze",
       location: "Enugu",
       image:
-        "https://images.pexels.com/photos/8348756/pexels-photo-8348756.jpeg",
+        "https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg",
       rating: 4.8,
       condition: "Excellent",
     },

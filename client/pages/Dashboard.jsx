@@ -21,7 +21,7 @@ export default function Dashboard() {
       id: 1,
       user: "Chioma Okafor",
       avatar:
-        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       action: "Listed 24 items for recycling",
       time: "2 hours ago",
     },
@@ -29,7 +29,7 @@ export default function Dashboard() {
       id: 2,
       user: "Chinedu Nwosu",
       avatar:
-        "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
       action: "Completed transaction with value ₦450",
       time: "5 hours ago",
     },
@@ -37,7 +37,7 @@ export default function Dashboard() {
       id: 3,
       user: "Aisha Bello",
       avatar:
-        "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       action: "Updated inventory status",
       time: "1 day ago",
     },
