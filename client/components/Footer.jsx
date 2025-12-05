@@ -52,24 +52,24 @@ export default function Footer() {
             <h3 className="text-foreground font-semibold mb-6">Site map</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/" className="text-muted-foreground hover:text-primary transition-colors">
                   Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                  Features
-                </a>
-              </li>
-              <li>
-                <Link to="/Prices" className="text-muted-foreground hover:text-primary transition-colors">
-                  Pricing
                 </Link>
               </li>
               <li>
-                <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
                   About us
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+                  Contact us
+                </Link>
               </li>
               <li>
                 <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
