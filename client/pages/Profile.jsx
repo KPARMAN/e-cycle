@@ -8,13 +8,13 @@ export default function Profile() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState({
-    firstName: "Lucky",
-    lastName: "Smith",
-    email: "lucky.smith@example.com",
-    phone: "+1 (555) 123-4567",
-    company: "E-waste Solutions Inc",
+    firstName: "Chidi",
+    lastName: "Okonkwo",
+    email: "chidi.okonkwo@example.com",
+    phone: "+234-701-234-5678",
+    company: "Eco-Waste Nigeria Ltd",
     bio: "Professional e-waste recycling specialist with 5+ years of experience",
-    location: "San Francisco, CA",
+    location: "Lagos",
     rating: "4.8",
     reviews: "156",
   });
@@ -57,7 +57,7 @@ export default function Profile() {
               <div className="flex items-center gap-6 mb-8 pb-8 border-b border-gray-200">
                 <div className="relative">
                   <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-4xl font-bold">
-                    L
+                    C
                   </div>
                   <button className="absolute bottom-0 right-0 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition-colors">
                     <Camera className="w-4 h-4" />
