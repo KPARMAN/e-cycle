@@ -200,10 +200,16 @@ export default function Listings() {
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors" aria-label="View">
+                        <button
+                          className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors"
+                          aria-label="View"
+                        >
                           <Eye className="w-4 h-4" />
                         </button>
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors" aria-label="Edit">
+                        <button
+                          className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors"
+                          aria-label="Edit"
+                        >
                           <Edit2 className="w-4 h-4" />
                         </button>
                         <button
@@ -256,11 +262,15 @@ export default function Listings() {
                   <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
                     <div>
                       <p className="text-gray-600 text-xs">Price</p>
-                      <p className="text-gray-900 font-semibold">{listing.price}</p>
+                      <p className="text-gray-900 font-semibold">
+                        {listing.price}
+                      </p>
                     </div>
                     <div>
                       <p className="text-gray-600 text-xs">Quantity</p>
-                      <p className="text-gray-900 font-semibold">{listing.quantity}</p>
+                      <p className="text-gray-900 font-semibold">
+                        {listing.quantity}
+                      </p>
                     </div>
                     <div>
                       <p className="text-gray-600 text-xs">Views</p>

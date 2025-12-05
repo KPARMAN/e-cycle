@@ -105,7 +105,9 @@ export default function Dashboard() {
                           {card.value}
                         </p>
                       </div>
-                      <Icon className={`${card.iconColor} w-8 h-8 sm:w-12 sm:h-12`} />
+                      <Icon
+                        className={`${card.iconColor} w-8 h-8 sm:w-12 sm:h-12`}
+                      />
                     </div>
                   </div>
                 );
@@ -125,7 +127,9 @@ export default function Dashboard() {
                     <p className="text-gray-600 text-xs sm:text-sm font-medium">
                       Active listings
                     </p>
-                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">288</p>
+                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                      288
+                    </p>
                   </div>
                   <MapPin className="text-black w-8 h-8 sm:w-12 sm:h-12" />
                 </div>
@@ -136,7 +140,9 @@ export default function Dashboard() {
                     <p className="text-gray-600 text-xs sm:text-sm font-medium">
                       Expired listings
                     </p>
-                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">288</p>
+                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 mt-2">
+                      288
+                    </p>
                   </div>
                   <Clock className="text-black w-8 h-8 sm:w-12 sm:h-12" />
                 </div>
@@ -165,13 +171,18 @@ export default function Dashboard() {
                       <p className="font-semibold text-gray-900 text-sm sm:text-base truncate">
                         {activity.user}
                       </p>
-                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{activity.action}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">
+                        {activity.action}
+                      </p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>
                     </div>
                   </div>
-                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors flex-shrink-0" aria-label="More options">
+                  <button
+                    className="p-2 hover:bg-gray-200 rounded-full transition-colors flex-shrink-0"
+                    aria-label="More options"
+                  >
                     <svg
                       className="w-5 h-5 text-gray-600"
                       fill="currentColor"

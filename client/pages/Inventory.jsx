@@ -110,7 +110,9 @@ export default function Inventory() {
           {/* Summary Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Items</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Total Items
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                 {totalItems}
               </p>
@@ -124,7 +126,9 @@ export default function Inventory() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Value</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Total Value
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-green-600 mt-2 truncate">
                 ₦
                 {(totalValue / 100).toLocaleString("en-US", {
@@ -198,7 +202,10 @@ export default function Inventory() {
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors" aria-label="Edit">
+                        <button
+                          className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors"
+                          aria-label="Edit"
+                        >
                           <Edit2 className="w-4 h-4" />
                         </button>
                         <button
@@ -283,7 +290,9 @@ export default function Inventory() {
               ))
             ) : (
               <div className="text-center py-12 bg-white rounded-lg">
-                <p className="text-gray-600 text-sm">No inventory items found</p>
+                <p className="text-gray-600 text-sm">
+                  No inventory items found
+                </p>
               </div>
             )}
           </div>

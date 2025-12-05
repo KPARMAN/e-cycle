@@ -84,7 +84,9 @@ export default function Notifications() {
             {notifications.length === 0 ? (
               <div className="bg-white rounded-lg p-8 sm:p-12 text-center">
                 <Bell className="w-12 h-12 sm:w-16 sm:h-16 text-gray-300 mx-auto mb-4" />
-                <p className="text-sm sm:text-base text-gray-600">No notifications yet</p>
+                <p className="text-sm sm:text-base text-gray-600">
+                  No notifications yet
+                </p>
               </div>
             ) : (
               notifications.map((notification) => (

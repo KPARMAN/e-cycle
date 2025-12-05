@@ -21,7 +21,9 @@ export default function RoleSelection() {
           <div className="bg-green-600 p-2 rounded-lg">
             <RecycleIcon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
           </div>
-          <span className="text-lg sm:text-xl font-semibold text-gray-800">E-Cycle</span>
+          <span className="text-lg sm:text-xl font-semibold text-gray-800">
+            E-Cycle
+          </span>
         </div>
       </div>
 
@@ -53,7 +55,9 @@ export default function RoleSelection() {
               className="w-full h-40 sm:h-64 object-cover"
             />
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Seller</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Seller
+              </h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
                 List your e-waste and connect with verified recyclers
               </p>
@@ -78,7 +82,9 @@ export default function RoleSelection() {
               className="w-full h-40 sm:h-64 object-cover"
             />
             <div className="p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">Recycler</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                Recycler
+              </h3>
               <p className="text-sm sm:text-base text-gray-600 mb-4">
                 Connect with technicians and grow your recycling network
               </p>
