@@ -10,7 +10,7 @@ export default function DashboardHeader({ searchQuery, setSearchQuery }) {
         {/* Left Side - Greeting and Search */}
         <div className="flex-1 flex items-center gap-6">
           <div>
-            <h1 className="text-2xl font-bold text-gray-900">Hi Lucky! 👋</h1>
+            <h1 className="text-2xl font-bold text-gray-900">Hi Chidi! 👋</h1>
             <p className="text-sm text-gray-600">Welcome back to your dashboard</p>
           </div>
 
