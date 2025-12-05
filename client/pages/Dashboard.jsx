@@ -98,14 +98,14 @@ export default function Dashboard() {
                   >
                     <div className="flex items-center justify-between">
                       <div>
-                        <p className="text-gray-600 text-sm font-medium">
+                        <p className="text-gray-600 text-xs sm:text-sm font-medium">
                           {card.label}
                         </p>
-                        <p className="text-3xl font-bold text-gray-900 mt-2">
+                        <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                           {card.value}
                         </p>
                       </div>
-                      <Icon className={`${card.iconColor} w-12 h-12`} />
+                      <Icon className={`${card.iconColor} w-8 h-8 sm:w-12 sm:h-12`} />
                     </div>
                   </div>
                 );
