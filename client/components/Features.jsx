@@ -60,6 +60,12 @@ export default function Features() {
           ))}
         </div>
 
+        <div className="text-center mb-8">
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            These powerful features work together to create a complete e-waste management ecosystem that transforms how your organization handles electronic waste.
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Button className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg">
             Get started
