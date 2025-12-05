@@ -14,66 +14,72 @@ export default function ExploreListing() {
     {
       id: 1,
       title: "Dell Laptop Computer",
-      price: "$450",
+      price: "₦450",
       category: "Electronics",
-      seller: "Sarah Johnson",
-      location: "San Francisco, CA",
-      image: "https://images.pexels.com/photos/18105/pexels-photo.jpg",
+      seller: "Chioma Okafor",
+      location: "Lagos",
+      image:
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       rating: 4.8,
       condition: "Like New",
     },
     {
       id: 2,
       title: "Computer RAM Modules",
-      price: "$120",
+      price: "₦120",
       category: "Computers",
-      seller: "Alex Chen",
-      location: "New York, NY",
-      image: "https://images.pexels.com/photos/5632399/pexels-photo-5632399.jpeg",
+      seller: "Chinedu Nwosu",
+      location: "Abuja",
+      image:
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
       rating: 4.5,
       condition: "Good",
     },
     {
       id: 3,
       title: "Used Mobile Phones",
-      price: "$200",
+      price: "₦200",
       category: "Mobile Devices",
-      seller: "Maria Garcia",
-      location: "Los Angeles, CA",
-      image: "https://images.pexels.com/photos/699122/pexels-photo-699122.jpeg",
+      seller: "Aisha Bello",
+      location: "Port Harcourt",
+      image:
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       rating: 4.9,
       condition: "Fair",
     },
     {
       id: 4,
       title: "Computer Monitor 24 inch",
-      price: "$150",
+      price: "₦150",
       category: "Electronics",
-      seller: "John Smith",
-      location: "Chicago, IL",
-      image: "https://images.pexels.com/photos/16217559/pexels-photo-16217559.jpeg",
+      seller: "Tunde Adeyemi",
+      location: "Kano",
+      image:
+        "https://images.pexels.com/photos/30730018/pexels-photo-30730018.jpeg",
       rating: 4.6,
       condition: "Good",
     },
     {
       id: 5,
       title: "Keyboard and Mouse Set",
-      price: "$80",
+      price: "₦80",
       category: "Electronics",
-      seller: "Emily Brown",
-      location: "Boston, MA",
-      image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg",
+      seller: "Zainab Hassan",
+      location: "Ibadan",
+      image:
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       rating: 4.7,
       condition: "Like New",
     },
     {
       id: 6,
       title: "Graphics Card GTX 1060",
-      price: "$280",
+      price: "₦280",
       category: "Computers",
-      seller: "David Lee",
-      location: "Seattle, WA",
-      image: "https://images.pexels.com/photos/8348756/pexels-photo-8348756.jpeg",
+      seller: "Ikechukwu Eze",
+      location: "Enugu",
+      image:
+        "https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg",
       rating: 4.8,
       condition: "Excellent",
     },
@@ -90,7 +96,7 @@ export default function ExploreListing() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -122,7 +128,7 @@ export default function ExploreListing() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white rounded-lg p-6 shadow-sm mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-900 mb-2">
                 Category
@@ -154,9 +160,9 @@ export default function ExploreListing() {
               </label>
               <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500">
                 <option>Any Price</option>
-                <option>$0 - $100</option>
-                <option>$100 - $500</option>
-                <option>$500+</option>
+                <option>₦0 - ₦100</option>
+                <option>₦100 - ₦500</option>
+                <option>₦500+</option>
               </select>
             </div>
 
@@ -197,7 +203,9 @@ export default function ExploreListing() {
                   >
                     <Heart
                       className="w-5 h-5"
-                      fill={favorites.includes(listing.id) ? "currentColor" : "none"}
+                      fill={
+                        favorites.includes(listing.id) ? "currentColor" : "none"
+                      }
                     />
                   </button>
                   <div className="absolute top-3 left-3 bg-green-600 text-white px-3 py-1 rounded-full text-xs font-semibold">

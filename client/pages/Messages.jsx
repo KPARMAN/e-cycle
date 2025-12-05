@@ -11,8 +11,9 @@ export default function Messages() {
   const chats = [
     {
       id: 1,
-      name: "Sarah Johnson",
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+      name: "Chioma Okafor",
+      avatar:
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       lastMessage: "That sounds great! When can we meet?",
       lastTime: "5 mins ago",
       unread: 2,
@@ -20,8 +21,9 @@ export default function Messages() {
     },
     {
       id: 2,
-      name: "Alex Chen",
-      avatar: "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
+      name: "Chinedu Nwosu",
+      avatar:
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
       lastMessage: "I'm interested in your laptop listing",
       lastTime: "2 hours ago",
       unread: 0,
@@ -29,8 +31,9 @@ export default function Messages() {
     },
     {
       id: 3,
-      name: "Maria Garcia",
-      avatar: "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+      name: "Aisha Bello",
+      avatar:
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       lastMessage: "Can you provide more details?",
       lastTime: "1 day ago",
       unread: 0,
@@ -41,7 +44,7 @@ export default function Messages() {
   const messages = [
     {
       id: 1,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "Hi! I'm interested in your computer parts listing",
       time: "10:30 AM",
       isOwn: false,
@@ -55,7 +58,7 @@ export default function Messages() {
     },
     {
       id: 3,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "I need RAM and storage drives. Are they in working condition?",
       time: "10:35 AM",
       isOwn: false,
@@ -69,7 +72,7 @@ export default function Messages() {
     },
     {
       id: 5,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "That sounds great! When can we meet?",
       time: "10:40 AM",
       isOwn: false,
@@ -100,10 +103,17 @@ export default function Messages() {
           <div className="w-80 bg-white border-r border-gray-200 flex flex-col overflow-hidden">
             {/* Chats Header */}
             <div className="p-6 border-b border-gray-200">
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Messages</h2>
+              <div className="flex gap-4 mb-4">
+                <button className="px-4 py-2 text-sm font-medium text-gray-900 border-b-2 border-green-600">
+                  Chats
+                </button>
+                <button className="px-4 py-2 text-sm font-medium text-gray-600 hover:text-gray-900">
+                  Groups
+                </button>
+              </div>
               <input
                 type="text"
-                placeholder="Search messages..."
+                placeholder="search"
                 className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500"
               />
             </div>
@@ -160,29 +170,42 @@ export default function Messages() {
             {currentChat && (
               <>
                 {/* Chat Header */}
-                <div className="px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-                  <div className="relative">
-                    <img
-                      src={currentChat.avatar}
-                      alt={currentChat.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div
-                      className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
-                        currentChat.status === "online"
-                          ? "bg-green-500"
-                          : "bg-gray-400"
-                      }`}
-                    ></div>
+                <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between bg-green-50">
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <img
+                        src={currentChat.avatar}
+                        alt={currentChat.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div
+                        className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
+                          currentChat.status === "online"
+                            ? "bg-green-500"
+                            : "bg-gray-400"
+                        }`}
+                      ></div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">
+                        {currentChat.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 capitalize">
+                        {currentChat.status}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">
-                      {currentChat.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 capitalize">
-                      {currentChat.status}
-                    </p>
-                  </div>
+                  <button className="text-gray-600 hover:text-gray-900">
+                    <svg
+                      className="w-6 h-6"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle cx="12" cy="5" r="2" />
+                      <circle cx="12" cy="12" r="2" />
+                      <circle cx="12" cy="19" r="2" />
+                    </svg>
+                  </button>
                 </div>
 
                 {/* Messages */}
@@ -204,9 +227,7 @@ export default function Messages() {
                         <p className="text-sm">{message.text}</p>
                         <p
                           className={`text-xs mt-1 ${
-                            message.isOwn
-                              ? "text-green-100"
-                              : "text-gray-600"
+                            message.isOwn ? "text-green-100" : "text-gray-600"
                           }`}
                         >
                           {message.time}

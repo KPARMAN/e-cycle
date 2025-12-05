@@ -25,7 +25,7 @@ export default function Notifications() {
     {
       id: 3,
       title: "Payment Confirmed",
-      message: "Payment of $450 has been confirmed",
+      message: "Payment of ₦450 has been confirmed",
       time: "1 day ago",
       read: true,
       type: "payment",
@@ -47,15 +47,15 @@ export default function Notifications() {
   const getNotificationColor = (type) => {
     switch (type) {
       case "message":
-        return "bg-blue-50 border-blue-200";
+        return "bg-green-100 border-green-200";
       case "listing":
-        return "bg-orange-50 border-orange-200";
+        return "bg-green-100 border-green-200";
       case "payment":
-        return "bg-green-50 border-green-200";
+        return "bg-green-100 border-green-200";
       case "inventory":
-        return "bg-purple-50 border-purple-200";
+        return "bg-green-100 border-green-200";
       default:
-        return "bg-gray-50 border-gray-200";
+        return "bg-green-100 border-green-200";
     }
   };
 
@@ -91,7 +91,7 @@ export default function Notifications() {
                 <div
                   key={notification.id}
                   className={`${getNotificationColor(
-                    notification.type
+                    notification.type,
                   )} border rounded-lg p-4 flex items-start justify-between hover:shadow-md transition-shadow`}
                 >
                   <div className="flex-1">

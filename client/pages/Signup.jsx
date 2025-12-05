@@ -151,7 +151,7 @@ export default function Signup() {
           <div className="bg-green-100 rounded-2xl p-8 flex flex-col justify-center">
             <div className="mb-6">
               <img
-                src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                src="https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg"
                 alt="Customer testimonial"
                 className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
               />
@@ -163,9 +163,9 @@ export default function Signup() {
               completely visible to me"
             </p>
             <div className="text-center">
-              <p className="font-semibold text-gray-900">Michael Chen</p>
+              <p className="font-semibold text-gray-900">Olawale Ogunmola</p>
               <p className="text-sm text-gray-600">
-                IT Director, TechCorp Solutions
+                IT Director, Tech Solutions Nigeria
               </p>
             </div>
             <div className="mt-6 flex items-center justify-center gap-2">
@@ -174,12 +174,12 @@ export default function Signup() {
               </span>
               <div className="flex -space-x-2">
                 <img
-                  src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg"
+                  src="https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg"
                   alt="User"
                   className="w-6 h-6 rounded-full border-2 border-white object-cover"
                 />
                 <img
-                  src="https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg"
+                  src="https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg"
                   alt="User"
                   className="w-6 h-6 rounded-full border-2 border-white object-cover"
                 />

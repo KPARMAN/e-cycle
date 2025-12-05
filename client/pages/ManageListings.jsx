@@ -13,7 +13,7 @@ export default function ManageListings() {
       id: 1,
       title: "Used Laptop Computer",
       category: "Electronics",
-      price: "$450",
+      price: "₦450",
       quantity: 2,
       status: "Active",
       posted: "3 days ago",
@@ -22,7 +22,7 @@ export default function ManageListings() {
       id: 2,
       title: "Desktop PC Parts",
       category: "Computers",
-      price: "$320",
+      price: "₦320",
       quantity: 5,
       status: "Active",
       posted: "1 week ago",
@@ -31,7 +31,7 @@ export default function ManageListings() {
       id: 3,
       title: "Old Mobile Phones",
       category: "Mobile Devices",
-      price: "$50",
+      price: "₦50",
       quantity: 10,
       status: "Expired",
       posted: "2 weeks ago",
@@ -40,7 +40,7 @@ export default function ManageListings() {
       id: 4,
       title: "Computer Monitors",
       category: "Electronics",
-      price: "$150",
+      price: "₦150",
       quantity: 3,
       status: "Active",
       posted: "5 days ago",
@@ -60,7 +60,7 @@ export default function ManageListings() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   return (
@@ -93,7 +93,7 @@ export default function ManageListings() {
 
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="bg-green-50 border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
                     Listing Title
@@ -139,7 +139,7 @@ export default function ManageListings() {
                     <td className="px-6 py-4 text-sm">
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
-                          listing.status
+                          listing.status,
                         )}`}
                       >
                         {listing.status}

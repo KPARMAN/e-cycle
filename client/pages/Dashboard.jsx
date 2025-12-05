@@ -19,22 +19,25 @@ export default function Dashboard() {
   const activities = [
     {
       id: 1,
-      user: "Sarah Johnson",
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+      user: "Chioma Okafor",
+      avatar:
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       action: "Listed 24 items for recycling",
       time: "2 hours ago",
     },
     {
       id: 2,
-      user: "Alex Chen",
-      avatar: "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
-      action: "Completed transaction with value $450",
+      user: "Chinedu Nwosu",
+      avatar:
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
+      action: "Completed transaction with value ₦450",
       time: "5 hours ago",
     },
     {
       id: 3,
-      user: "Maria Garcia",
-      avatar: "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+      user: "Aisha Bello",
+      avatar:
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       action: "Updated inventory status",
       time: "1 day ago",
     },
@@ -44,26 +47,26 @@ export default function Dashboard() {
     {
       id: 1,
       icon: BarChart3,
-      label: "Total Listings",
-      value: "2,548",
+      label: "Active recyclers",
+      value: "8",
       color: "bg-green-50",
       iconColor: "text-green-600",
     },
     {
       id: 2,
       icon: Package,
-      label: "Active Items",
-      value: "1,234",
-      color: "bg-blue-50",
-      iconColor: "text-blue-600",
+      label: "Listing views",
+      value: "8",
+      color: "bg-green-50",
+      iconColor: "text-green-600",
     },
     {
       id: 3,
       icon: TrendingUp,
-      label: "Total Value",
-      value: "$12,456",
-      color: "bg-purple-50",
-      iconColor: "text-purple-600",
+      label: "Waste listed",
+      value: "8",
+      color: "bg-green-50",
+      iconColor: "text-green-600",
     },
   ];
 
@@ -120,26 +123,22 @@ export default function Dashboard() {
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm font-medium">
-                      Active Listings
+                      Active listings
                     </p>
-                    <p className="text-4xl font-bold text-green-600 mt-2">
-                      268
-                    </p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">288</p>
                   </div>
-                  <MapPin className="text-green-600 w-12 h-12" />
+                  <MapPin className="text-black w-12 h-12" />
                 </div>
               </div>
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <div className="flex items-center justify-between">
                   <div>
                     <p className="text-gray-600 text-sm font-medium">
-                      Expired Listings
+                      Expired listings
                     </p>
-                    <p className="text-4xl font-bold text-orange-600 mt-2">
-                      268
-                    </p>
+                    <p className="text-4xl font-bold text-gray-900 mt-2">288</p>
                   </div>
-                  <Clock className="text-orange-600 w-12 h-12" />
+                  <Clock className="text-black w-12 h-12" />
                 </div>
               </div>
             </div>
@@ -166,9 +165,7 @@ export default function Dashboard() {
                       <p className="font-semibold text-gray-900">
                         {activity.user}
                       </p>
-                      <p className="text-sm text-gray-600">
-                        {activity.action}
-                      </p>
+                      <p className="text-sm text-gray-600">{activity.action}</p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>

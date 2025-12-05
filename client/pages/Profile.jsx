@@ -8,13 +8,13 @@ export default function Profile() {
   const [searchQuery, setSearchQuery] = useState("");
   const [isEditing, setIsEditing] = useState(false);
   const [profileData, setProfileData] = useState({
-    firstName: "Lucky",
-    lastName: "Smith",
-    email: "lucky.smith@example.com",
-    phone: "+1 (555) 123-4567",
-    company: "E-waste Solutions Inc",
+    firstName: "Chidi",
+    lastName: "Okonkwo",
+    email: "chidi.okonkwo@example.com",
+    phone: "+234-701-234-5678",
+    company: "Eco-Waste Nigeria Ltd",
     bio: "Professional e-waste recycling specialist with 5+ years of experience",
-    location: "San Francisco, CA",
+    location: "Lagos",
     rating: "4.8",
     reviews: "156",
   });
@@ -52,12 +52,12 @@ export default function Profile() {
               </p>
             </div>
 
-            <div className="bg-white rounded-lg p-8 shadow-sm">
+            <div className="bg-green-50 rounded-lg p-8 shadow-sm">
               {/* Profile Picture */}
               <div className="flex items-center gap-6 mb-8 pb-8 border-b border-gray-200">
                 <div className="relative">
                   <div className="w-24 h-24 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-4xl font-bold">
-                    L
+                    C
                   </div>
                   <button className="absolute bottom-0 right-0 bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition-colors">
                     <Camera className="w-4 h-4" />
@@ -95,7 +95,7 @@ export default function Profile() {
                       value={profileData.firstName}
                       onChange={handleChange}
                       disabled={!isEditing}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                     />
                   </div>
 
@@ -109,7 +109,7 @@ export default function Profile() {
                       value={profileData.lastName}
                       onChange={handleChange}
                       disabled={!isEditing}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                     />
                   </div>
                 </div>
@@ -124,7 +124,7 @@ export default function Profile() {
                     value={profileData.email}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
@@ -138,27 +138,13 @@ export default function Profile() {
                     value={profileData.phone}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Company
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={profileData.company}
-                    onChange={handleChange}
-                    disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Location
+                    Country
                   </label>
                   <input
                     type="text"
@@ -166,22 +152,31 @@ export default function Profile() {
                     value={profileData.location}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
                   />
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-900 mb-2">
-                    Bio
+                    City
                   </label>
-                  <textarea
-                    name="bio"
-                    value={profileData.bio}
+                  <input
+                    type="text"
+                    name="company"
+                    value={profileData.company}
                     onChange={handleChange}
                     disabled={!isEditing}
-                    rows="4"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-gray-50 disabled:text-gray-600"
-                  ></textarea>
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-500 disabled:bg-green-200 disabled:text-gray-900"
+                  />
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium text-gray-900 mb-2">
+                    Role
+                  </label>
+                  <div className="w-full px-4 py-2 border border-gray-300 rounded-lg bg-green-200 text-gray-900">
+                    E waste seller
+                  </div>
                 </div>
 
                 <div className="flex gap-4 pt-4 border-t border-gray-200">

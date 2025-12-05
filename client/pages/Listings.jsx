@@ -13,7 +13,7 @@ export default function Listings() {
       id: 1,
       title: "Used Laptop Computer",
       category: "Electronics",
-      price: "$450",
+      price: "₦450",
       quantity: 2,
       status: "Active",
       views: 234,
@@ -23,7 +23,7 @@ export default function Listings() {
       id: 2,
       title: "Desktop PC Parts",
       category: "Computers",
-      price: "$320",
+      price: "₦320",
       quantity: 5,
       status: "Active",
       views: 156,
@@ -33,7 +33,7 @@ export default function Listings() {
       id: 3,
       title: "Old Mobile Phones",
       category: "Mobile Devices",
-      price: "$50",
+      price: "₦50",
       quantity: 10,
       status: "Expired",
       views: 89,
@@ -43,7 +43,7 @@ export default function Listings() {
       id: 4,
       title: "Computer Monitors",
       category: "Electronics",
-      price: "$150",
+      price: "₦150",
       quantity: 3,
       status: "Active",
       views: 412,
@@ -53,7 +53,7 @@ export default function Listings() {
       id: 5,
       title: "Keyboard & Mouse Set",
       category: "Peripherals",
-      price: "$80",
+      price: "₦80",
       quantity: 7,
       status: "Active",
       views: 187,
@@ -74,7 +74,7 @@ export default function Listings() {
   const filteredListings = listings.filter(
     (listing) =>
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      listing.category.toLowerCase().includes(searchQuery.toLowerCase())
+      listing.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const activeListings = listings.filter((l) => l.status === "Active").length;
@@ -113,7 +113,9 @@ export default function Listings() {
           {/* Summary Cards */}
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">Total Listings</p>
+              <p className="text-gray-600 text-sm font-medium">
+                Total Listings
+              </p>
               <p className="text-3xl font-bold text-gray-900 mt-2">
                 {listings.length}
               </p>
@@ -141,7 +143,7 @@ export default function Listings() {
           {/* Listings Table */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="bg-green-50 border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
                     Listing Title
@@ -184,7 +186,7 @@ export default function Listings() {
                     <td className="px-6 py-4 text-sm">
                       <span
                         className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
-                          listing.status
+                          listing.status,
                         )}`}
                       >
                         {listing.status}

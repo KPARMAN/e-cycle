@@ -16,7 +16,7 @@ export default function Inventory() {
       category: "Electronics",
       quantity: 12,
       condition: "Good",
-      value: "$4,500",
+      value: "₦4,500",
       lastUpdated: "2 days ago",
     },
     {
@@ -26,7 +26,7 @@ export default function Inventory() {
       category: "Computer Parts",
       quantity: 24,
       condition: "Excellent",
-      value: "$2,880",
+      value: "₦2,880",
       lastUpdated: "1 day ago",
     },
     {
@@ -36,7 +36,7 @@ export default function Inventory() {
       category: "Office Equipment",
       quantity: 5,
       condition: "Good",
-      value: "$2,250",
+      value: "₦2,250",
       lastUpdated: "3 days ago",
     },
     {
@@ -46,7 +46,7 @@ export default function Inventory() {
       category: "Displays",
       quantity: 8,
       condition: "Like New",
-      value: "$1,600",
+      value: "₦1,600",
       lastUpdated: "5 days ago",
     },
     {
@@ -56,7 +56,7 @@ export default function Inventory() {
       category: "Peripherals",
       quantity: 15,
       condition: "Good",
-      value: "$1,200",
+      value: "₦1,200",
       lastUpdated: "1 week ago",
     },
   ]);
@@ -68,11 +68,11 @@ export default function Inventory() {
   const filteredInventory = inventory.filter(
     (item) =>
       item.itemName.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchQuery.toLowerCase())
+      item.category.toLowerCase().includes(searchQuery.toLowerCase()),
   );
 
   const totalValue = inventory.reduce((acc, item) => {
-    const value = parseInt(item.value.replace(/[$,]/g, ""));
+    const value = parseInt(item.value.replace(/[₦,]/g, ""));
     return acc + value;
   }, 0);
 
@@ -116,7 +116,9 @@ export default function Inventory() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">Inventory Items</p>
+              <p className="text-gray-600 text-sm font-medium">
+                Inventory Items
+              </p>
               <p className="text-3xl font-bold text-gray-900 mt-2">
                 {inventory.length}
               </p>
@@ -124,7 +126,8 @@ export default function Inventory() {
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <p className="text-gray-600 text-sm font-medium">Total Value</p>
               <p className="text-3xl font-bold text-green-600 mt-2">
-                ${(totalValue / 100).toLocaleString("en-US", {
+                ₦
+                {(totalValue / 100).toLocaleString("en-US", {
                   minimumFractionDigits: 2,
                 })}
               </p>
@@ -134,7 +137,7 @@ export default function Inventory() {
           {/* Inventory Table */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="w-full">
-              <thead className="bg-gray-50 border-b border-gray-200">
+              <thead className="bg-green-50 border-b border-gray-200">
                 <tr>
                   <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
                     Item Name
@@ -164,7 +167,10 @@ export default function Inventory() {
               </thead>
               <tbody className="divide-y divide-gray-200">
                 {filteredInventory.map((item) => (
-                  <tr key={item.id} className="hover:bg-gray-50 transition-colors">
+                  <tr
+                    key={item.id}
+                    className="hover:bg-gray-50 transition-colors"
+                  >
                     <td className="px-6 py-4 text-sm text-gray-900 font-medium">
                       {item.itemName}
                     </td>
