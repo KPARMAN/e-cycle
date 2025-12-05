@@ -98,9 +98,9 @@ export default function Messages() {
           setSearchQuery={setSearchQuery}
         />
 
-        <div className="flex-1 flex overflow-hidden">
+        <div className="flex-1 flex flex-col md:flex-row overflow-hidden">
           {/* Chats Sidebar */}
-          <div className="w-80 bg-white border-r border-gray-200 flex flex-col overflow-hidden">
+          <div className="w-full md:w-80 bg-white border-r border-gray-200 flex flex-col overflow-hidden md:border-b-0 border-b">
             {/* Chats Header */}
             <div className="p-6 border-b border-gray-200">
               <div className="flex gap-4 mb-4">
