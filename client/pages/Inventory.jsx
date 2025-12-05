@@ -88,19 +88,19 @@ export default function Inventory() {
           setSearchQuery={setSearchQuery}
         />
 
-        <div className="flex-1 overflow-auto p-6">
-          <div className="mb-8 flex items-center justify-between">
+        <div className="flex-1 overflow-auto p-4 sm:p-6 pt-16 lg:pt-6">
+          <div className="mb-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 E-waste Inventory
               </h2>
-              <p className="text-gray-600">
+              <p className="text-xs sm:text-base text-gray-600">
                 Manage your e-waste items and stock levels
               </p>
             </div>
             <Button
               onClick={() => navigate("/dashboard/add-listings")}
-              className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2"
+              className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2 text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-6 w-full sm:w-auto"
             >
               <Plus className="w-4 h-4" />
               Add Item
@@ -108,7 +108,7 @@ export default function Inventory() {
           </div>
 
           {/* Summary Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <p className="text-gray-600 text-sm font-medium">Total Items</p>
               <p className="text-3xl font-bold text-gray-900 mt-2">
