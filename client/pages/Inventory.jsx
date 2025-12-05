@@ -109,23 +109,23 @@ export default function Inventory() {
 
           {/* Summary Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 mb-8">
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">Total Items</p>
-              <p className="text-3xl font-bold text-gray-900 mt-2">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Items</p>
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                 {totalItems}
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
                 Inventory Items
               </p>
-              <p className="text-3xl font-bold text-gray-900 mt-2">
+              <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                 {inventory.length}
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-sm">
-              <p className="text-gray-600 text-sm font-medium">Total Value</p>
-              <p className="text-3xl font-bold text-green-600 mt-2">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Value</p>
+              <p className="text-2xl sm:text-3xl font-bold text-green-600 mt-2 truncate">
                 ₦
                 {(totalValue / 100).toLocaleString("en-US", {
                   minimumFractionDigits: 2,
@@ -134,8 +134,8 @@ export default function Inventory() {
             </div>
           </div>
 
-          {/* Inventory Table */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+          {/* Inventory Table - Desktop */}
+          <div className="hidden md:block bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="w-full">
               <thead className="bg-green-50 border-b border-gray-200">
                 <tr>
@@ -198,12 +198,13 @@ export default function Inventory() {
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors">
+                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors" aria-label="Edit">
                           <Edit2 className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => handleDelete(item.id)}
                           className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                          aria-label="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -217,6 +218,72 @@ export default function Inventory() {
             {filteredInventory.length === 0 && (
               <div className="text-center py-12">
                 <p className="text-gray-600">No inventory items found</p>
+              </div>
+            )}
+          </div>
+
+          {/* Inventory Cards - Mobile */}
+          <div className="md:hidden space-y-4">
+            {filteredInventory.length > 0 ? (
+              filteredInventory.map((item) => (
+                <div
+                  key={item.id}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-4"
+                >
+                  <h3 className="font-semibold text-gray-900 text-sm mb-2 truncate">
+                    {item.itemName}
+                  </h3>
+                  <p className="text-xs text-gray-600 mb-3">SKU: {item.sku}</p>
+
+                  <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                    <div>
+                      <p className="text-gray-600 text-xs">Category</p>
+                      <p className="text-gray-900 font-semibold text-xs">
+                        {item.category}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Quantity</p>
+                      <span className="px-2 py-1 bg-blue-100 text-blue-800 rounded text-xs font-semibold inline-block">
+                        {item.quantity}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Condition</p>
+                      <span className="px-2 py-1 bg-green-100 text-green-800 rounded text-xs font-semibold inline-block">
+                        {item.condition}
+                      </span>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Value</p>
+                      <p className="text-gray-900 font-semibold text-xs">
+                        {item.value}
+                      </p>
+                    </div>
+                  </div>
+
+                  <p className="text-xs text-gray-500 mb-3">
+                    Updated: {item.lastUpdated}
+                  </p>
+
+                  <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
+                    <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors text-sm">
+                      <Edit2 className="w-4 h-4" />
+                      <span>Edit</span>
+                    </button>
+                    <button
+                      onClick={() => handleDelete(item.id)}
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors text-sm"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                      <span>Delete</span>
+                    </button>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-12 bg-white rounded-lg">
+                <p className="text-gray-600 text-sm">No inventory items found</p>
               </div>
             )}
           </div>
