@@ -18,7 +18,8 @@ export default function ExploreListing() {
       category: "Electronics",
       seller: "Chioma Okafor",
       location: "Lagos",
-      image: "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
+      image:
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       rating: 4.8,
       condition: "Like New",
     },
@@ -41,7 +42,8 @@ export default function ExploreListing() {
       category: "Mobile Devices",
       seller: "Aisha Bello",
       location: "Port Harcourt",
-      image: "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
+      image:
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       rating: 4.9,
       condition: "Fair",
     },
