@@ -167,29 +167,38 @@ export default function Messages() {
             {currentChat && (
               <>
                 {/* Chat Header */}
-                <div className="px-6 py-4 border-b border-gray-200 flex items-center gap-3">
-                  <div className="relative">
-                    <img
-                      src={currentChat.avatar}
-                      alt={currentChat.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div
-                      className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
-                        currentChat.status === "online"
-                          ? "bg-green-500"
-                          : "bg-gray-400"
-                      }`}
-                    ></div>
+                <div className="px-6 py-4 border-b border-gray-200 flex items-center justify-between bg-green-50">
+                  <div className="flex items-center gap-3">
+                    <div className="relative">
+                      <img
+                        src={currentChat.avatar}
+                        alt={currentChat.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                      />
+                      <div
+                        className={`absolute bottom-0 right-0 w-3 h-3 rounded-full border-2 border-white ${
+                          currentChat.status === "online"
+                            ? "bg-green-500"
+                            : "bg-gray-400"
+                        }`}
+                      ></div>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">
+                        {currentChat.name}
+                      </h3>
+                      <p className="text-sm text-gray-600 capitalize">
+                        {currentChat.status}
+                      </p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">
-                      {currentChat.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 capitalize">
-                      {currentChat.status}
-                    </p>
-                  </div>
+                  <button className="text-gray-600 hover:text-gray-900">
+                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                      <circle cx="12" cy="5" r="2" />
+                      <circle cx="12" cy="12" r="2" />
+                      <circle cx="12" cy="19" r="2" />
+                    </svg>
+                  </button>
                 </div>
 
                 {/* Messages */}
