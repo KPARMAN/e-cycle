@@ -140,8 +140,8 @@ export default function Listings() {
             </div>
           </div>
 
-          {/* Listings Table */}
-          <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+          {/* Listings Table - Desktop */}
+          <div className="hidden md:block bg-white rounded-lg shadow-sm overflow-hidden">
             <table className="w-full">
               <thead className="bg-green-50 border-b border-gray-200">
                 <tr>
@@ -200,15 +200,16 @@ export default function Listings() {
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors">
+                        <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors" aria-label="View">
                           <Eye className="w-4 h-4" />
                         </button>
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors">
+                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors" aria-label="Edit">
                           <Edit2 className="w-4 h-4" />
                         </button>
                         <button
                           onClick={() => handleDelete(listing.id)}
                           className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
+                          aria-label="Delete"
                         >
                           <Trash2 className="w-4 h-4" />
                         </button>
@@ -221,6 +222,81 @@ export default function Listings() {
 
             {filteredListings.length === 0 && (
               <div className="text-center py-12">
+                <p className="text-gray-600">No listings found</p>
+              </div>
+            )}
+          </div>
+
+          {/* Listings Cards - Mobile */}
+          <div className="md:hidden space-y-4">
+            {filteredListings.length > 0 ? (
+              filteredListings.map((listing) => (
+                <div
+                  key={listing.id}
+                  className="bg-white rounded-lg shadow-sm border border-gray-200 p-4"
+                >
+                  <div className="flex items-start justify-between mb-3">
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 text-sm">
+                        {listing.title}
+                      </h3>
+                      <p className="text-xs text-gray-600 mt-1">
+                        {listing.category}
+                      </p>
+                    </div>
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs font-semibold ${getStatusColor(
+                        listing.status,
+                      )}`}
+                    >
+                      {listing.status}
+                    </span>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-3 mb-4 text-sm">
+                    <div>
+                      <p className="text-gray-600 text-xs">Price</p>
+                      <p className="text-gray-900 font-semibold">{listing.price}</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Quantity</p>
+                      <p className="text-gray-900 font-semibold">{listing.quantity}</p>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Views</p>
+                      <p className="text-gray-900 font-semibold">
+                        {listing.views}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-gray-600 text-xs">Posted</p>
+                      <p className="text-gray-900 font-semibold text-xs">
+                        {listing.posted}
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-center gap-2 pt-3 border-t border-gray-100">
+                    <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors text-sm">
+                      <Eye className="w-4 h-4" />
+                      <span>View</span>
+                    </button>
+                    <button className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors text-sm">
+                      <Edit2 className="w-4 h-4" />
+                      <span>Edit</span>
+                    </button>
+                    <button
+                      onClick={() => handleDelete(listing.id)}
+                      className="flex-1 flex items-center justify-center gap-2 px-3 py-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors text-sm"
+                    >
+                      <Trash2 className="w-4 h-4" />
+                      <span>Delete</span>
+                    </button>
+                  </div>
+                </div>
+              ))
+            ) : (
+              <div className="text-center py-12 bg-white rounded-lg">
                 <p className="text-gray-600">No listings found</p>
               </div>
             )}
