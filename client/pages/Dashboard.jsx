@@ -146,32 +146,32 @@ export default function Dashboard() {
 
           {/* Recent Activities */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
               Recent Activities
             </h3>
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               {activities.map((activity) => (
                 <div
                   key={activity.id}
-                  className="flex items-center justify-between p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors"
+                  className="flex items-start sm:items-center justify-between p-4 sm:p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors gap-4"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-start sm:items-center gap-3 sm:gap-4 flex-1 min-w-0">
                     <img
                       src={activity.avatar}
                       alt={activity.user}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                     />
-                    <div>
-                      <p className="font-semibold text-gray-900">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base truncate">
                         {activity.user}
                       </p>
-                      <p className="text-sm text-gray-600">{activity.action}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{activity.action}</p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>
                     </div>
                   </div>
-                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors flex-shrink-0" aria-label="More options">
                     <svg
                       className="w-5 h-5 text-gray-600"
                       fill="currentColor"
