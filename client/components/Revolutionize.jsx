@@ -23,8 +23,8 @@ export default function Revolutionize() {
           {/* Right side - Image */}
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/34406295/pexels-photo-34406295.jpeg"
-              alt="Workers handling waste disposal in an urban environment on a sunny day"
+              src="https://images.pexels.com/photos/11256545/pexels-photo-11256545.jpeg"
+              alt="E-waste recycling: Pile of old air conditioners awaiting proper electronic waste processing"
               className="w-full h-full object-cover"
             />
           </div>

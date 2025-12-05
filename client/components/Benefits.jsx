@@ -8,8 +8,8 @@ export default function Benefits() {
           {/* Left side - Image */}
           <div className="order-2 lg:order-1 relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/6990475/pexels-photo-6990475.jpeg"
-              alt="Young woman exploring renewable energy with a globe and wind turbine model"
+              src="https://images.pexels.com/photos/2644597/pexels-photo-2644597.jpeg"
+              alt="E-waste recycling: Broken hard drives showing data destruction and material recovery"
               className="w-full h-full object-cover"
             />
           </div>

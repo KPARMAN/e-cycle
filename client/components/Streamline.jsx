@@ -8,8 +8,8 @@ export default function Streamline() {
           {/* Left side - Image */}
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/12491634/pexels-photo-12491634.jpeg"
-              alt="Person collecting plastic waste outdoors in Cameroon for e-waste management"
+              src="https://images.pexels.com/photos/9953442/pexels-photo-9953442.jpeg"
+              alt="E-waste recycling: Discarded electronics with exposed wires and components"
               className="w-full h-full object-cover"
             />
           </div>

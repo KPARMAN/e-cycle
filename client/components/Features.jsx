@@ -29,8 +29,8 @@ export default function Features() {
           {/* Image */}
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg order-2 lg:order-1">
             <img
-              src="https://images.pexels.com/photos/9222613/pexels-photo-9222613.jpeg"
-              alt="Sanitation worker in orange overalls managing waste for proper disposal and recycling"
+              src="https://images.pexels.com/photos/3174348/pexels-photo-3174348.jpeg"
+              alt="E-waste recycling: Aerial view of landfill with mixed garbage and electronic waste"
               className="w-full h-full object-cover"
             />
           </div>
