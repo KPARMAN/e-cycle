@@ -14,7 +14,7 @@ export default function ExploreListing() {
     {
       id: 1,
       title: "Dell Laptop Computer",
-      price: "$450",
+      price: "₦450",
       category: "Electronics",
       seller: "Sarah Johnson",
       location: "San Francisco, CA",
@@ -25,7 +25,7 @@ export default function ExploreListing() {
     {
       id: 2,
       title: "Computer RAM Modules",
-      price: "$120",
+      price: "₦120",
       category: "Computers",
       seller: "Alex Chen",
       location: "New York, NY",
@@ -37,7 +37,7 @@ export default function ExploreListing() {
     {
       id: 3,
       title: "Used Mobile Phones",
-      price: "$200",
+      price: "₦200",
       category: "Mobile Devices",
       seller: "Maria Garcia",
       location: "Los Angeles, CA",
@@ -48,7 +48,7 @@ export default function ExploreListing() {
     {
       id: 4,
       title: "Computer Monitor 24 inch",
-      price: "$150",
+      price: "₦150",
       category: "Electronics",
       seller: "John Smith",
       location: "Chicago, IL",
@@ -60,7 +60,7 @@ export default function ExploreListing() {
     {
       id: 5,
       title: "Keyboard and Mouse Set",
-      price: "$80",
+      price: "₦80",
       category: "Electronics",
       seller: "Emily Brown",
       location: "Boston, MA",
@@ -72,7 +72,7 @@ export default function ExploreListing() {
     {
       id: 6,
       title: "Graphics Card GTX 1060",
-      price: "$280",
+      price: "₦280",
       category: "Computers",
       seller: "David Lee",
       location: "Seattle, WA",

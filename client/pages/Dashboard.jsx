@@ -30,7 +30,7 @@ export default function Dashboard() {
       user: "Alex Chen",
       avatar:
         "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
-      action: "Completed transaction with value $450",
+      action: "Completed transaction with value ₦450",
       time: "5 hours ago",
     },
     {
