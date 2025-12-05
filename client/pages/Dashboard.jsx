@@ -19,7 +19,7 @@ export default function Dashboard() {
   const activities = [
     {
       id: 1,
-      user: "Sarah Johnson",
+      user: "Chioma Okafor",
       avatar:
         "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
       action: "Listed 24 items for recycling",
@@ -27,7 +27,7 @@ export default function Dashboard() {
     },
     {
       id: 2,
-      user: "Alex Chen",
+      user: "Chinedu Nwosu",
       avatar:
         "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
       action: "Completed transaction with value ₦450",
@@ -35,7 +35,7 @@ export default function Dashboard() {
     },
     {
       id: 3,
-      user: "Maria Garcia",
+      user: "Aisha Bello",
       avatar:
         "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
       action: "Updated inventory status",

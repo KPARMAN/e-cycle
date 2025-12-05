@@ -11,7 +11,7 @@ export default function Messages() {
   const chats = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Chioma Okafor",
       avatar:
         "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
       lastMessage: "That sounds great! When can we meet?",
@@ -21,7 +21,7 @@ export default function Messages() {
     },
     {
       id: 2,
-      name: "Alex Chen",
+      name: "Chinedu Nwosu",
       avatar:
         "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
       lastMessage: "I'm interested in your laptop listing",
@@ -31,7 +31,7 @@ export default function Messages() {
     },
     {
       id: 3,
-      name: "Maria Garcia",
+      name: "Aisha Bello",
       avatar:
         "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
       lastMessage: "Can you provide more details?",
