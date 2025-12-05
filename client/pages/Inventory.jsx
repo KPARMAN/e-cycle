@@ -16,7 +16,7 @@ export default function Inventory() {
       category: "Electronics",
       quantity: 12,
       condition: "Good",
-      value: "$4,500",
+      value: "₦4,500",
       lastUpdated: "2 days ago",
     },
     {
@@ -26,7 +26,7 @@ export default function Inventory() {
       category: "Computer Parts",
       quantity: 24,
       condition: "Excellent",
-      value: "$2,880",
+      value: "₦2,880",
       lastUpdated: "1 day ago",
     },
     {
@@ -36,7 +36,7 @@ export default function Inventory() {
       category: "Office Equipment",
       quantity: 5,
       condition: "Good",
-      value: "$2,250",
+      value: "₦2,250",
       lastUpdated: "3 days ago",
     },
     {
@@ -46,7 +46,7 @@ export default function Inventory() {
       category: "Displays",
       quantity: 8,
       condition: "Like New",
-      value: "$1,600",
+      value: "₦1,600",
       lastUpdated: "5 days ago",
     },
     {
@@ -56,7 +56,7 @@ export default function Inventory() {
       category: "Peripherals",
       quantity: 15,
       condition: "Good",
-      value: "$1,200",
+      value: "₦1,200",
       lastUpdated: "1 week ago",
     },
   ]);
@@ -72,7 +72,7 @@ export default function Inventory() {
   );
 
   const totalValue = inventory.reduce((acc, item) => {
-    const value = parseInt(item.value.replace(/[$,]/g, ""));
+    const value = parseInt(item.value.replace(/[₦,]/g, ""));
     return acc + value;
   }, 0);
 
@@ -126,7 +126,7 @@ export default function Inventory() {
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <p className="text-gray-600 text-sm font-medium">Total Value</p>
               <p className="text-3xl font-bold text-green-600 mt-2">
-                $
+                ₦
                 {(totalValue / 100).toLocaleString("en-US", {
                   minimumFractionDigits: 2,
                 })}

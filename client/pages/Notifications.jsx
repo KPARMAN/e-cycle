@@ -25,7 +25,7 @@ export default function Notifications() {
     {
       id: 3,
       title: "Payment Confirmed",
-      message: "Payment of $450 has been confirmed",
+      message: "Payment of ₦450 has been confirmed",
       time: "1 day ago",
       read: true,
       type: "payment",
