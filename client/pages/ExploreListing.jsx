@@ -122,7 +122,7 @@ export default function ExploreListing() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white rounded-lg p-6 shadow-sm mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
+          <div className="bg-gray-50 rounded-lg p-6 shadow-sm mb-6 grid grid-cols-1 md:grid-cols-4 gap-4">
             <div>
               <label className="block text-sm font-medium text-gray-900 mb-2">
                 Category
