@@ -18,6 +18,9 @@ import Messages from "./pages/Messages.jsx";
 import ExploreListing from "./pages/ExploreListing.jsx";
 import Inventory from "./pages/Inventory.jsx";
 import Listings from "./pages/Listings.jsx";
+import Services from "./pages/Services.jsx";
+import AboutUs from "./pages/AboutUs.jsx";
+import Contact from "./pages/Contact.jsx";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/auth/role-selection" element={<RoleSelection />} />
           <Route path="/auth/signup" element={<Signup />} />
           <Route path="/auth/login" element={<Login />} />
