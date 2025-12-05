@@ -13,7 +13,7 @@ export default function Messages() {
       id: 1,
       name: "Chioma Okafor",
       avatar:
-        "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg",
+        "https://images.pexels.com/photos/32401765/pexels-photo-32401765.jpeg",
       lastMessage: "That sounds great! When can we meet?",
       lastTime: "5 mins ago",
       unread: 2,
@@ -23,7 +23,7 @@ export default function Messages() {
       id: 2,
       name: "Chinedu Nwosu",
       avatar:
-        "https://images.pexels.com/photos/4349812/pexels-photo-4349812.jpeg",
+        "https://images.pexels.com/photos/7191260/pexels-photo-7191260.jpeg",
       lastMessage: "I'm interested in your laptop listing",
       lastTime: "2 hours ago",
       unread: 0,
@@ -33,7 +33,7 @@ export default function Messages() {
       id: 3,
       name: "Aisha Bello",
       avatar:
-        "https://images.pexels.com/photos/2220294/pexels-photo-2220294.jpeg",
+        "https://images.pexels.com/photos/33672079/pexels-photo-33672079.jpeg",
       lastMessage: "Can you provide more details?",
       lastTime: "1 day ago",
       unread: 0,
@@ -44,7 +44,7 @@ export default function Messages() {
   const messages = [
     {
       id: 1,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "Hi! I'm interested in your computer parts listing",
       time: "10:30 AM",
       isOwn: false,
@@ -58,7 +58,7 @@ export default function Messages() {
     },
     {
       id: 3,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "I need RAM and storage drives. Are they in working condition?",
       time: "10:35 AM",
       isOwn: false,
@@ -72,7 +72,7 @@ export default function Messages() {
     },
     {
       id: 5,
-      sender: "Sarah",
+      sender: "Chioma",
       text: "That sounds great! When can we meet?",
       time: "10:40 AM",
       isOwn: false,
