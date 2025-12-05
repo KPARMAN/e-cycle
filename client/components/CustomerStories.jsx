@@ -28,13 +28,25 @@ export default function CustomerStories() {
   return (
     <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-            Customer stories
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            See how businesses are transforming their e-waste 
-          </p>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+          {/* Text */}
+          <div className="text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+              Customer stories
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              See how businesses are transforming their e-waste management with our innovative platform. Real results from real organizations driving sustainable change.
+            </p>
+          </div>
+
+          {/* Image */}
+          <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.pexels.com/photos/12491634/pexels-photo-12491634.jpeg"
+              alt="Workers managing e-waste collection and recycling operations in Africa"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
