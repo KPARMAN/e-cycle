@@ -111,7 +111,7 @@ export default function Contact() {
 
                 {submitted && (
                   <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg">
-                    <p className="text-green-700 font-semibold">
+                    <p className="text-green-700 font-semibold text-sm sm:text-base">
                       ✓ Thank you! We've received your message and will get back
                       to you soon.
                     </p>
@@ -123,7 +123,7 @@ export default function Contact() {
                   method="POST"
                   netlify
                   onSubmit={handleSubmit}
-                  className="space-y-6"
+                  className="space-y-4 sm:space-y-6"
                 >
                   <input type="hidden" name="form-name" value="contact" />
 
@@ -131,7 +131,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="name"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs sm:text-sm font-semibold text-gray-900 mb-2"
                     >
                       Full Name *
                     </label>
@@ -141,7 +141,7 @@ export default function Contact() {
                       name="name"
                       required
                       placeholder="John Doe"
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors text-sm"
                       aria-label="Your full name"
                     />
                   </div>
@@ -150,7 +150,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="email"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs sm:text-sm font-semibold text-gray-900 mb-2"
                     >
                       Email Address *
                     </label>
@@ -160,7 +160,7 @@ export default function Contact() {
                       name="email"
                       required
                       placeholder="john@example.com"
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors text-sm"
                       aria-label="Your email address"
                     />
                   </div>
@@ -169,7 +169,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="company"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs sm:text-sm font-semibold text-gray-900 mb-2"
                     >
                       Company Name
                     </label>
@@ -178,7 +178,7 @@ export default function Contact() {
                       id="company"
                       name="company"
                       placeholder="Your Company"
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors text-sm"
                       aria-label="Your company name"
                     />
                   </div>
@@ -187,7 +187,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs sm:text-sm font-semibold text-gray-900 mb-2"
                     >
                       Subject *
                     </label>
@@ -197,7 +197,7 @@ export default function Contact() {
                       name="subject"
                       required
                       placeholder="How can we help?"
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors text-sm"
                       aria-label="Message subject"
                     />
                   </div>
@@ -206,7 +206,7 @@ export default function Contact() {
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
+                      className="block text-xs sm:text-sm font-semibold text-gray-900 mb-2"
                     >
                       Message *
                     </label>
@@ -215,8 +215,8 @@ export default function Contact() {
                       name="message"
                       required
                       placeholder="Your message..."
-                      rows={5}
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors resize-none"
+                      rows={4}
+                      className="w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors resize-none text-sm"
                       aria-label="Your message"
                     ></textarea>
                   </div>
@@ -224,12 +224,12 @@ export default function Contact() {
                   {/* Submit Button */}
                   <Button
                     type="submit"
-                    className="w-full bg-primary text-white hover:bg-primary/90 py-3 rounded-lg font-semibold text-base transition-colors"
+                    className="w-full bg-primary text-white hover:bg-primary/90 py-3 rounded-lg font-semibold text-sm sm:text-base transition-colors"
                   >
                     Send Message
                   </Button>
 
-                  <p className="text-sm text-gray-500 text-center">
+                  <p className="text-xs sm:text-sm text-gray-500 text-center">
                     * Required fields
                   </p>
                 </form>
@@ -239,49 +239,49 @@ export default function Contact() {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
               Frequently Asked Questions
             </h2>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
+            <div className="space-y-4 sm:space-y-6">
+              <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                   What is the typical response time?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   We aim to respond to all inquiries within 24 business hours.
                   For urgent matters, please call us directly.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                   Do you offer support for organizations outside Nigeria?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   Yes, we serve organizations across Africa. Contact us to
                   discuss your specific location and needs.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                   How can I schedule a consultation?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   You can request a consultation through this contact form, and
                   our team will reach out to schedule a meeting at your
                   convenience.
                 </p>
               </div>
 
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
+              <div className="bg-white p-4 sm:p-6 rounded-lg border border-gray-200">
+                <h3 className="text-sm sm:text-base font-semibold text-gray-900 mb-2">
                   What payment methods do you accept?
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-xs sm:text-sm text-gray-600">
                   We accept various payment methods including bank transfers,
                   credit cards, and other digital payment options. Details will
                   be provided during your consultation.
