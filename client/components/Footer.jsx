@@ -2,22 +2,22 @@ import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-50 text-gray-700 py-16 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gray-50 text-gray-700 py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 mb-8 sm:mb-12">
           {/* Left - Company Info */}
-          <div>
+          <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
                 <span className="text-white text-sm font-bold">E</span>
               </div>
               <span className="font-bold text-foreground text-lg">E-Cycle</span>
             </div>
-            <p className="text-sm leading-relaxed text-muted-foreground mb-6">
+            <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground mb-6">
               ECYCLE connects local technicians with verified recyclers to turn
-              that waste into value.Whether it's a broken bulb, a fried circuit
+              that waste into value. Whether it's a broken bulb, a fried circuit
               board, or a box of mixed e-waste, we make it easy to submit,
-              negotiate, and recycl- all from your phone
+              negotiate, and recycle all from your phone
             </p>
             <div className="flex gap-4">
               <a
@@ -64,8 +64,8 @@ export default function Footer() {
 
           {/* Middle - Site Map */}
           <div>
-            <h3 className="text-foreground font-semibold mb-6">Site map</h3>
-            <ul className="space-y-3 text-sm">
+            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">Site map</h3>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <Link
                   to="/"
@@ -119,8 +119,8 @@ export default function Footer() {
 
           {/* Right - Legal */}
           <div>
-            <h3 className="text-foreground font-semibold mb-6">Legal</h3>
-            <ul className="space-y-3 text-sm">
+            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">Legal</h3>
+            <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <a
                   href="#"
@@ -158,7 +158,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom - Copyright */}
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-600"></div>
+        <div className="border-t border-gray-200 pt-6 sm:pt-8 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm text-gray-600 gap-4"></div>
       </div>
     </footer>
   );
