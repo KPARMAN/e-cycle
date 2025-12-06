@@ -23,7 +23,10 @@ export default function Header() {
     <header className="bg-transparent fixed w-full top-0 z-50">
       <nav className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2 font-bold text-lg sm:text-xl flex-shrink-0">
+        <Link
+          to="/"
+          className="flex items-center gap-2 font-bold text-lg sm:text-xl flex-shrink-0"
+        >
           <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
             <span className="text-white text-sm font-bold">E</span>
           </div>

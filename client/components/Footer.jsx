@@ -64,7 +64,9 @@ export default function Footer() {
 
           {/* Middle - Site Map */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">Site map</h3>
+            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">
+              Site map
+            </h3>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <Link
@@ -119,7 +121,9 @@ export default function Footer() {
 
           {/* Right - Legal */}
           <div>
-            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">Legal</h3>
+            <h3 className="text-foreground font-semibold mb-4 sm:mb-6 text-sm sm:text-base">
+              Legal
+            </h3>
             <ul className="space-y-2 sm:space-y-3 text-xs sm:text-sm">
               <li>
                 <a

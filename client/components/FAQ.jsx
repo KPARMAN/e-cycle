@@ -42,13 +42,18 @@ export default function FAQ() {
             FAQs
           </h2>
           <p className="text-base sm:text-lg text-muted-foreground px-2">
-            Find answers to common questions about E-Cycle and our platform features.
+            Find answers to common questions about E-Cycle and our platform
+            features.
           </p>
         </div>
 
         <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-4 sm:px-6">
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border border-gray-200 rounded-lg px-4 sm:px-6"
+            >
               <AccordionTrigger className="text-left text-sm sm:text-base font-semibold text-foreground hover:text-primary py-3 sm:py-4">
                 {faq.question}
               </AccordionTrigger>

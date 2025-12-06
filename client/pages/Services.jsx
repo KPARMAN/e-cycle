@@ -79,7 +79,9 @@ export default function Services() {
                   key={index}
                   className="bg-white p-6 sm:p-8 rounded-xl shadow-sm hover:shadow-lg transition-shadow border border-gray-100"
                 >
-                  <div className="text-4xl sm:text-5xl mb-4">{service.icon}</div>
+                  <div className="text-4xl sm:text-5xl mb-4">
+                    {service.icon}
+                  </div>
                   <h3 className="text-lg sm:text-xl font-semibold text-gray-900 mb-3 sm:mb-4">
                     {service.title}
                   </h3>

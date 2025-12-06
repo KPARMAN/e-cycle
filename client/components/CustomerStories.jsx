@@ -67,7 +67,9 @@ export default function CustomerStories() {
                   </span>
                 ))}
               </div>
-              <p className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">"{story.quote}"</p>
+              <p className="text-sm sm:text-base leading-relaxed mb-6 sm:mb-8">
+                "{story.quote}"
+              </p>
               <div className="flex items-start gap-3 sm:gap-4">
                 <div className="w-10 h-10 sm:w-12 sm:h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
                   <span className="text-white font-semibold text-xs sm:text-sm">
@@ -75,8 +77,12 @@ export default function CustomerStories() {
                   </span>
                 </div>
                 <div className="min-w-0">
-                  <p className="font-semibold text-sm sm:text-base">{story.name}</p>
-                  <p className="text-xs sm:text-sm text-gray-400">{story.role}</p>
+                  <p className="font-semibold text-sm sm:text-base">
+                    {story.name}
+                  </p>
+                  <p className="text-xs sm:text-sm text-gray-400">
+                    {story.role}
+                  </p>
                   <p className="text-xs text-gray-500">{story.company}</p>
                 </div>
               </div>

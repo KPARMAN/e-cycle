@@ -92,7 +92,9 @@ export default function Login() {
           <div className="bg-green-600 p-2 rounded-lg">
             <RecycleIcon className="w-6 h-6 text-white" />
           </div>
-          <span className="text-lg sm:text-xl font-semibold text-gray-800">E-Cycle</span>
+          <span className="text-lg sm:text-xl font-semibold text-gray-800">
+            E-Cycle
+          </span>
         </div>
       </div>
 
@@ -115,7 +117,9 @@ export default function Login() {
               completely visible to me"
             </p>
             <div className="text-center">
-              <p className="font-semibold text-gray-900 text-sm sm:text-base">Olawale Ogunmola</p>
+              <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                Olawale Ogunmola
+              </p>
               <p className="text-xs sm:text-sm text-gray-600">
                 IT Director, Tech Solutions Nigeria
               </p>
@@ -148,7 +152,9 @@ export default function Login() {
             >
               ← Back to Home
             </Button>
-            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">Login</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+              Login
+            </h1>
 
             <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               {/* Email */}
@@ -167,7 +173,9 @@ export default function Login() {
                   }`}
                 />
                 {touched.email && errors.email && (
-                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
@@ -187,7 +195,9 @@ export default function Login() {
                   }`}
                 />
                 {touched.password && errors.password && (
-                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
+                    {errors.password}
+                  </p>
                 )}
               </div>
 
@@ -198,7 +208,9 @@ export default function Login() {
                     type="checkbox"
                     className="w-4 h-4 rounded border-green-300"
                   />
-                  <span className="text-gray-700 text-xs sm:text-sm">Remember Me</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">
+                    Remember Me
+                  </span>
                 </label>
                 <a
                   href="#"
@@ -221,7 +233,9 @@ export default function Login() {
             <div className="mt-4 sm:mt-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex-1 h-px bg-gray-300"></div>
-                <span className="text-gray-600 text-xs sm:text-sm">Or Continue With</span>
+                <span className="text-gray-600 text-xs sm:text-sm">
+                  Or Continue With
+                </span>
                 <div className="flex-1 h-px bg-gray-300"></div>
               </div>
 

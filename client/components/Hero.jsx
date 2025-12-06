@@ -21,8 +21,8 @@ export default function Hero() {
             </h1>
             <p className="text-base sm:text-lg text-white mb-6 sm:mb-8 leading-relaxed max-w-2xl">
               Streamline e-waste management with our innovative platform.
-              Technicians and admins can easily track, verify, and process waste for responsible
-              recycling.
+              Technicians and admins can easily track, verify, and process waste
+              for responsible recycling.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center w-full sm:w-auto">
               <Button

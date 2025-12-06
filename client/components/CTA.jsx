@@ -11,13 +11,18 @@ export default function CTA() {
               Ready to transform your e-waste management?
             </h2>
             <p className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 leading-relaxed">
-              Join thousands of organizations already benefiting from our innovative e-waste management platform. Start your sustainability journey today.
+              Join thousands of organizations already benefiting from our
+              innovative e-waste management platform. Start your sustainability
+              journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
               <Button className="bg-primary text-white hover:bg-primary/90 text-base px-6 sm:px-8 py-3 sm:py-6 rounded-lg w-full sm:w-auto">
                 Get started free
               </Button>
-              <Button variant="outline" className="text-base px-6 sm:px-8 py-3 sm:py-6 rounded-lg border-gray-300 w-full sm:w-auto">
+              <Button
+                variant="outline"
+                className="text-base px-6 sm:px-8 py-3 sm:py-6 rounded-lg border-gray-300 w-full sm:w-auto"
+              >
                 Schedule demo
               </Button>
             </div>
@@ -30,7 +35,9 @@ export default function CTA() {
             <div className="relative h-full flex items-center justify-center">
               <div className="text-center">
                 <div className="text-5xl sm:text-6xl mb-4"></div>
-                <p className="text-sm font-semibold text-gray-700">Start Your Journey</p>
+                <p className="text-sm font-semibold text-gray-700">
+                  Start Your Journey
+                </p>
               </div>
             </div>
           </div>

@@ -108,19 +108,29 @@ export default function AboutUs() {
           <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 sm:gap-8 text-center">
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">700+</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                  700+
+                </div>
                 <p className="text-xs sm:text-sm text-gray-600">Active Users</p>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">40%</div>
-                <p className="text-xs sm:text-sm text-gray-600">Cost Reduction</p>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                  40%
+                </div>
+                <p className="text-xs sm:text-sm text-gray-600">
+                  Cost Reduction
+                </p>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">60%</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                  60%
+                </div>
                 <p className="text-xs sm:text-sm text-gray-600">Time Savings</p>
               </div>
               <div>
-                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">100%</div>
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
+                  100%
+                </div>
                 <p className="text-xs sm:text-sm text-gray-600">Compliant</p>
               </div>
             </div>
