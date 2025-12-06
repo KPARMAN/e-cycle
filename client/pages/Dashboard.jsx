@@ -71,7 +71,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       <Sidebar />
 
       {/* Main Content */}
@@ -82,30 +82,32 @@ export default function Dashboard() {
         />
 
         {/* Content Area */}
-        <div className="flex-1 overflow-auto p-6">
+        <div className="flex-1 overflow-auto p-4 sm:p-6">
           {/* Dashboard Overview */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
               Dashboard Overview
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {metricCards.map((card) => {
                 const Icon = card.icon;
                 return (
                   <div
                     key={card.id}
-                    className={`${card.color} rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
+                    className={`${card.color} rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow`}
                   >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-gray-600 text-sm font-medium">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-gray-600 text-xs sm:text-sm font-medium">
                           {card.label}
                         </p>
-                        <p className="text-3xl font-bold text-gray-900 mt-2">
+                        <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                           {card.value}
                         </p>
                       </div>
-                      <Icon className={`${card.iconColor} w-12 h-12`} />
+                      <Icon
+                        className={`${card.iconColor} w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0`}
+                      />
                     </div>
                   </div>
                 );
@@ -115,10 +117,10 @@ export default function Dashboard() {
 
           {/* Listings Summary */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
               Listings Summary
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               <div className="bg-white rounded-lg p-6 shadow-sm">
                 <div className="flex items-center justify-between">
                   <div>
@@ -146,32 +148,34 @@ export default function Dashboard() {
 
           {/* Recent Activities */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
               Recent Activities
             </h3>
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
               {activities.map((activity) => (
                 <div
                   key={activity.id}
-                  className="flex items-center justify-between p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors gap-3 sm:gap-0"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
                     <img
                       src={activity.avatar}
                       alt={activity.user}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                     />
-                    <div>
-                      <p className="font-semibold text-gray-900">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base">
                         {activity.user}
                       </p>
-                      <p className="text-sm text-gray-600">{activity.action}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 truncate">
+                        {activity.action}
+                      </p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>
                     </div>
                   </div>
-                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors flex-shrink-0">
                     <svg
                       className="w-5 h-5 text-gray-600"
                       fill="currentColor"
@@ -189,24 +193,24 @@ export default function Dashboard() {
 
           {/* Action Cards */}
           <div className="mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 flex flex-col justify-between">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Value My E-Waste
                   </h4>
                   <p className="text-gray-700 text-sm">
                     Get an instant valuation of your electronic waste items
                   </p>
                 </div>
-                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4">
+                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4 text-sm">
                   Get Valuation
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 flex flex-col justify-between">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Manage Listings
                   </h4>
                   <p className="text-gray-700 text-sm">
@@ -215,7 +219,7 @@ export default function Dashboard() {
                 </div>
                 <Button
                   onClick={() => navigate("/dashboard/manage-listings")}
-                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4"
+                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4 text-sm"
                 >
                   Manage Now
                 </Button>
@@ -225,10 +229,10 @@ export default function Dashboard() {
 
           {/* Explore Listing */}
           <div className="mb-8">
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <div className="flex items-center justify-between">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Explore Listings
                   </h4>
                   <p className="text-gray-700 text-sm">
@@ -237,7 +241,7 @@ export default function Dashboard() {
                 </div>
                 <Button
                   onClick={() => navigate("/dashboard/explore-listing")}
-                  className="bg-green-600 text-white hover:bg-green-700"
+                  className="bg-green-600 text-white hover:bg-green-700 w-full sm:w-auto text-sm"
                 >
                   Explore Now
                 </Button>
