@@ -87,20 +87,20 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
       {/* Header */}
-      <div className="flex items-center justify-center pt-6 pb-8">
+      <div className="flex items-center justify-center pt-4 sm:pt-6 pb-6 sm:pb-8">
         <div className="flex items-center gap-2">
           <div className="bg-green-600 p-2 rounded-lg">
             <RecycleIcon className="w-6 h-6 text-white" />
           </div>
-          <span className="text-xl font-semibold text-gray-800">E-Cycle</span>
+          <span className="text-lg sm:text-xl font-semibold text-gray-800">E-Cycle</span>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Left Column - Testimonial */}
-          <div className="bg-green-100 rounded-2xl p-8 flex flex-col justify-center">
+          <div className="bg-green-100 rounded-2xl p-6 sm:p-8 flex flex-col justify-center hidden lg:flex">
             <div className="mb-6">
               <img
                 src="https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg"
