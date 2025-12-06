@@ -153,25 +153,27 @@ export default function Dashboard() {
               {activities.map((activity) => (
                 <div
                   key={activity.id}
-                  className="flex items-center justify-between p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors"
+                  className="flex flex-col sm:flex-row sm:items-center sm:justify-between p-4 sm:p-6 border-b border-gray-100 last:border-b-0 hover:bg-gray-50 transition-colors gap-3 sm:gap-0"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex items-center gap-3 sm:gap-4 flex-1 min-w-0">
                     <img
                       src={activity.avatar}
                       alt={activity.user}
-                      className="w-12 h-12 rounded-full object-cover"
+                      className="w-10 h-10 sm:w-12 sm:h-12 rounded-full object-cover flex-shrink-0"
                     />
-                    <div>
-                      <p className="font-semibold text-gray-900">
+                    <div className="min-w-0 flex-1">
+                      <p className="font-semibold text-gray-900 text-sm sm:text-base">
                         {activity.user}
                       </p>
-                      <p className="text-sm text-gray-600">{activity.action}</p>
+                      <p className="text-xs sm:text-sm text-gray-600 truncate">
+                        {activity.action}
+                      </p>
                       <p className="text-xs text-gray-500 mt-1">
                         {activity.time}
                       </p>
                     </div>
                   </div>
-                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors">
+                  <button className="p-2 hover:bg-gray-200 rounded-full transition-colors flex-shrink-0">
                     <svg
                       className="w-5 h-5 text-gray-600"
                       fill="currentColor"
