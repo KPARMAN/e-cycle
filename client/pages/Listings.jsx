@@ -121,19 +121,25 @@ export default function Listings() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Active</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Active
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-green-600 mt-2">
                 {activeListings}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Expired</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Expired
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-orange-600 mt-2">
                 {expiredListings}
               </p>
             </div>
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Views</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Total Views
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-blue-600 mt-2">
                 {totalViews}
               </p>
@@ -234,7 +240,9 @@ export default function Listings() {
 
             {filteredListings.length === 0 && (
               <div className="text-center py-8 sm:py-12">
-                <p className="text-gray-600 text-sm sm:text-base">No listings found</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  No listings found
+                </p>
               </div>
             )}
           </div>

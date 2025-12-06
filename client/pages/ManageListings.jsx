@@ -184,7 +184,9 @@ export default function ManageListings() {
 
             {filteredListings.length === 0 && (
               <div className="text-center py-8 sm:py-12">
-                <p className="text-gray-600 text-sm sm:text-base">No listings found</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  No listings found
+                </p>
               </div>
             )}
           </div>

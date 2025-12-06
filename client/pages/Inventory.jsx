@@ -110,7 +110,9 @@ export default function Inventory() {
           {/* Summary Cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Items</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Total Items
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                 {totalItems}
               </p>
@@ -124,7 +126,9 @@ export default function Inventory() {
               </p>
             </div>
             <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm">
-              <p className="text-gray-600 text-xs sm:text-sm font-medium">Total Value</p>
+              <p className="text-gray-600 text-xs sm:text-sm font-medium">
+                Total Value
+              </p>
               <p className="text-2xl sm:text-3xl font-bold text-green-600 mt-2">
                 ₦
                 {(totalValue / 100).toLocaleString("en-US", {
@@ -218,7 +222,9 @@ export default function Inventory() {
 
             {filteredInventory.length === 0 && (
               <div className="text-center py-8 sm:py-12">
-                <p className="text-gray-600 text-sm sm:text-base">No inventory items found</p>
+                <p className="text-gray-600 text-sm sm:text-base">
+                  No inventory items found
+                </p>
               </div>
             )}
           </div>

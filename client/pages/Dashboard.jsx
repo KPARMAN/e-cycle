@@ -105,7 +105,9 @@ export default function Dashboard() {
                           {card.value}
                         </p>
                       </div>
-                      <Icon className={`${card.iconColor} w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0`} />
+                      <Icon
+                        className={`${card.iconColor} w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0`}
+                      />
                     </div>
                   </div>
                 );
