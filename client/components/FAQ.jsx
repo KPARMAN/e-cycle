@@ -35,38 +35,38 @@ const faqs = [
 
 export default function FAQ() {
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-3xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground mb-4 sm:mb-6">
             FAQs
           </h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-base sm:text-lg text-muted-foreground px-2">
             Find answers to common questions about E-Cycle and our platform features.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-6">
-              <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+            <AccordionItem key={index} value={`item-${index}`} className="border border-gray-200 rounded-lg px-4 sm:px-6">
+              <AccordionTrigger className="text-left text-sm sm:text-base font-semibold text-foreground hover:text-primary py-3 sm:py-4">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground">
+              <AccordionContent className="text-sm sm:text-base text-muted-foreground">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
 
-        <div className="text-center mt-12">
-          <h3 className="text-lg font-semibold text-foreground mb-4">
+        <div className="text-center mt-8 sm:mt-12">
+          <h3 className="text-base sm:text-lg font-semibold text-foreground mb-3 sm:mb-4">
             Still have questions?
           </h3>
-          <p className="text-muted-foreground mb-6">
-           Our support team to help you find answers.
+          <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 px-2">
+            Our support team to help you find answers.
           </p>
-          <button className="bg-primary text-black hover:bg-primary/90 px-8 py-3 rounded-lg font-semibold transition-colors">
+          <button className="bg-primary text-black hover:bg-primary/90 px-6 sm:px-8 py-3 rounded-lg font-semibold transition-colors text-sm sm:text-base w-full sm:w-auto">
             Contact
           </button>
         </div>
