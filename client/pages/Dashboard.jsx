@@ -94,18 +94,18 @@ export default function Dashboard() {
                 return (
                   <div
                     key={card.id}
-                    className={`${card.color} rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow`}
+                    className={`${card.color} rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow`}
                   >
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <p className="text-gray-600 text-sm font-medium">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="min-w-0 flex-1">
+                        <p className="text-gray-600 text-xs sm:text-sm font-medium">
                           {card.label}
                         </p>
-                        <p className="text-3xl font-bold text-gray-900 mt-2">
+                        <p className="text-2xl sm:text-3xl font-bold text-gray-900 mt-2">
                           {card.value}
                         </p>
                       </div>
-                      <Icon className={`${card.iconColor} w-12 h-12`} />
+                      <Icon className={`${card.iconColor} w-10 h-10 sm:w-12 sm:h-12 flex-shrink-0`} />
                     </div>
                   </div>
                 );
