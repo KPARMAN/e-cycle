@@ -146,7 +146,7 @@ export default function Dashboard() {
 
           {/* Recent Activities */}
           <div className="mb-8">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">
+            <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">
               Recent Activities
             </h3>
             <div className="bg-white rounded-lg shadow-sm overflow-hidden">
