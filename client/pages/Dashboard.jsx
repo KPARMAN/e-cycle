@@ -85,10 +85,10 @@ export default function Dashboard() {
         <div className="flex-1 overflow-auto p-4 sm:p-6">
           {/* Dashboard Overview */}
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4">
               Dashboard Overview
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
               {metricCards.map((card) => {
                 const Icon = card.icon;
                 return (
