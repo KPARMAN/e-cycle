@@ -19,19 +19,19 @@ export default function Contact() {
       <Header />
       <main>
         {/* Contact Hero */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-50 to-emerald-50">
+        <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-50 to-emerald-50 mt-16">
           <div className="max-w-4xl mx-auto text-center">
             <Button
               onClick={() => navigate("/")}
-              className="mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors"
+              className="mb-4 sm:mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors text-sm"
               aria-label="Go back to home page"
             >
               ← Back to Home
             </Button>
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6">
               Contact Us
             </h1>
-            <p className="text-xl text-gray-600 leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed px-2">
               Have questions about our e-waste management solutions? We'd love
               to hear from you.
             </p>
@@ -39,20 +39,20 @@ export default function Contact() {
         </section>
 
         {/* Contact Content */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-8 sm:py-12 md:py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
               {/* Contact Information */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
                   Get in Touch
                 </h2>
 
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="mb-6 sm:mb-8">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                     📍 Location
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     E-Cycle Africa
                     <br />
                     Innovative Tech Hub
@@ -61,11 +61,11 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="mb-6 sm:mb-8">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                     📞 Phone
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     <a
                       href="tel:+234123456789"
                       className="text-green-600 hover:text-green-700 transition-colors"
@@ -75,11 +75,11 @@ export default function Contact() {
                   </p>
                 </div>
 
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="mb-6 sm:mb-8">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                     ✉️ Email
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     <a
                       href="mailto:info@e-cycle.com"
                       className="text-green-600 hover:text-green-700 transition-colors"
@@ -90,10 +90,10 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-2">
                     ⏰ Business Hours
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-sm sm:text-base text-gray-600">
                     Monday - Friday: 9:00 AM - 6:00 PM
                     <br />
                     Saturday: 10:00 AM - 4:00 PM
@@ -105,7 +105,7 @@ export default function Contact() {
 
               {/* Contact Form */}
               <div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-8">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-8">
                   Send us a Message
                 </h2>
 
