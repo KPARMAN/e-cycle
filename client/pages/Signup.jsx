@@ -153,23 +153,23 @@ export default function Signup() {
               <img
                 src="https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg"
                 alt="Customer testimonial"
-                className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4"
               />
             </div>
-            <p className="text-gray-700 mb-6 leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-gray-700 mb-6 leading-relaxed text-center">
               "Ever since I started using this platform, listing my waste has
               become effortless, and I finally feel confident knowing every
               step—from listings to connecting with recyclers, secure, and
               completely visible to me"
             </p>
             <div className="text-center">
-              <p className="font-semibold text-gray-900">Olawale Ogunmola</p>
-              <p className="text-sm text-gray-600">
+              <p className="font-semibold text-gray-900 text-sm sm:text-base">Olawale Ogunmola</p>
+              <p className="text-xs sm:text-sm text-gray-600">
                 IT Director, Tech Solutions Nigeria
               </p>
             </div>
-            <div className="mt-6 flex items-center justify-center gap-2">
-              <span className="text-sm text-gray-700">
+            <div className="mt-6 flex items-center justify-center gap-2 text-xs sm:text-sm">
+              <span className="text-gray-700">
                 Over 700+ Sellers and Recyclers joined
               </span>
               <div className="flex -space-x-2">
@@ -191,16 +191,16 @@ export default function Signup() {
           <div>
             <Button
               onClick={() => navigate("/")}
-              className="mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors"
+              className="mb-4 sm:mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors text-xs sm:text-sm"
               aria-label="Go back to home page"
             >
               ← Back to Home
             </Button>
-            <h1 className="text-3xl font-bold text-gray-900 mb-6">
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 sm:mb-6">
               Create An account
             </h1>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               {/* Full Name */}
               <div>
                 <input
@@ -210,14 +210,14 @@ export default function Signup() {
                   value={formData.fullName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.fullName && errors.fullName
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.fullName && errors.fullName && (
-                  <p className="text-red-500 text-sm mt-1">{errors.fullName}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.fullName}</p>
                 )}
               </div>
 
@@ -230,14 +230,14 @@ export default function Signup() {
                   value={formData.companyName}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.companyName && errors.companyName
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.companyName && errors.companyName && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
                     {errors.companyName}
                   </p>
                 )}
@@ -252,14 +252,14 @@ export default function Signup() {
                   value={formData.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.email && errors.email
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.email && errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.email}</p>
                 )}
               </div>
 
@@ -272,14 +272,14 @@ export default function Signup() {
                   value={formData.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.password && errors.password
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.password && errors.password && (
-                  <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">{errors.password}</p>
                 )}
               </div>
 
@@ -292,18 +292,18 @@ export default function Signup() {
                   value={formData.confirmPassword}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.confirmPassword && errors.confirmPassword
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.confirmPassword && errors.confirmPassword && (
-                  <p className="text-red-500 text-sm mt-1">
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
                     {errors.confirmPassword}
                   </p>
                 )}
-                <p className="text-gray-600 text-sm mt-1">
+                <p className="text-gray-600 text-xs sm:text-sm mt-1">
                   Password must be at least 8 character including numbers and
                   special characters
                 </p>
@@ -312,36 +312,36 @@ export default function Signup() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-green-600 text-white hover:bg-green-700 py-3 rounded-lg font-semibold mt-6"
+                className="w-full bg-green-600 text-white hover:bg-green-700 py-2 sm:py-3 rounded-lg font-semibold mt-4 sm:mt-6 text-sm"
               >
                 Create An account
               </Button>
             </form>
 
             {/* OAuth Options */}
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex-1 h-px bg-gray-300"></div>
-                <span className="text-gray-600 text-sm">Or Continue With</span>
+                <span className="text-gray-600 text-xs sm:text-sm">Or Continue With</span>
                 <div className="flex-1 h-px bg-gray-300"></div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Apple className="w-5 h-5" />
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2">
+                  <Apple className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Mail className="w-5 h-5" />
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
-                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-3 flex items-center justify-center gap-2">
+                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-2 sm:py-3 flex items-center justify-center gap-2 text-sm">
                   f
                 </Button>
               </div>
             </div>
 
             {/* Login Link */}
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm mb-2">
+            <div className="mt-4 sm:mt-6 text-center">
+              <p className="text-gray-600 text-xs sm:text-sm mb-2">
                 <input type="checkbox" className="mr-2" />
                 By signing up, I agree to the{" "}
                 <a href="#" className="text-gray-900 underline">
@@ -353,7 +353,7 @@ export default function Signup() {
                 </a>
                 .
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Already Have an Account?{" "}
                 <button
                   onClick={() => navigate("/auth/login")}
