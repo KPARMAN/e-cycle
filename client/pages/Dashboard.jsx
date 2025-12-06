@@ -191,24 +191,24 @@ export default function Dashboard() {
 
           {/* Action Cards */}
           <div className="mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-8 flex flex-col justify-between">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Value My E-Waste
                   </h4>
                   <p className="text-gray-700 text-sm">
                     Get an instant valuation of your electronic waste items
                   </p>
                 </div>
-                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4">
+                <Button className="bg-green-600 text-white hover:bg-green-700 w-fit mt-4 text-sm">
                   Get Valuation
                 </Button>
               </div>
 
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-8 flex flex-col justify-between">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 sm:p-8 flex flex-col justify-between">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Manage Listings
                   </h4>
                   <p className="text-gray-700 text-sm">
@@ -217,7 +217,7 @@ export default function Dashboard() {
                 </div>
                 <Button
                   onClick={() => navigate("/dashboard/manage-listings")}
-                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4"
+                  className="bg-blue-600 text-white hover:bg-blue-700 w-fit mt-4 text-sm"
                 >
                   Manage Now
                 </Button>
@@ -227,10 +227,10 @@ export default function Dashboard() {
 
           {/* Explore Listing */}
           <div className="mb-8">
-            <div className="bg-white rounded-lg p-8 shadow-sm">
-              <div className="flex items-center justify-between">
+            <div className="bg-white rounded-lg p-6 sm:p-8 shadow-sm">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900 mb-2">
+                  <h4 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                     Explore Listings
                   </h4>
                   <p className="text-gray-700 text-sm">
@@ -239,7 +239,7 @@ export default function Dashboard() {
                 </div>
                 <Button
                   onClick={() => navigate("/dashboard/explore-listing")}
-                  className="bg-green-600 text-white hover:bg-green-700"
+                  className="bg-green-600 text-white hover:bg-green-700 w-full sm:w-auto text-sm"
                 >
                   Explore Now
                 </Button>
