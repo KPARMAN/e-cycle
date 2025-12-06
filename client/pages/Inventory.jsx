@@ -136,87 +136,89 @@ export default function Inventory() {
 
           {/* Inventory Table */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-            <table className="w-full">
-              <thead className="bg-green-50 border-b border-gray-200">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Item Name
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    SKU
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Category
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Quantity
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Condition
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Value
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Last Updated
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {filteredInventory.map((item) => (
-                  <tr
-                    key={item.id}
-                    className="hover:bg-gray-50 transition-colors"
-                  >
-                    <td className="px-6 py-4 text-sm text-gray-900 font-medium">
-                      {item.itemName}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {item.sku}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {item.category}
-                    </td>
-                    <td className="px-6 py-4 text-sm">
-                      <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
-                        {item.quantity}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm">
-                      <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">
-                        {item.condition}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-900 font-semibold">
-                      {item.value}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {item.lastUpdated}
-                    </td>
-                    <td className="px-6 py-4 text-sm">
-                      <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors">
-                          <Edit2 className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(item.id)}
-                          className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-max">
+                <thead className="bg-green-50 border-b border-gray-200">
+                  <tr>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Item Name
+                    </th>
+                    <th className="hidden md:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      SKU
+                    </th>
+                    <th className="hidden sm:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Category
+                    </th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Qty
+                    </th>
+                    <th className="hidden lg:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Condition
+                    </th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Value
+                    </th>
+                    <th className="hidden lg:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Last Updated
+                    </th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Actions
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {filteredInventory.map((item) => (
+                    <tr
+                      key={item.id}
+                      className="hover:bg-gray-50 transition-colors"
+                    >
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-900 font-medium">
+                        <div className="max-w-xs truncate">{item.itemName}</div>
+                      </td>
+                      <td className="hidden md:table-cell px-6 py-4 text-sm text-gray-600">
+                        {item.sku}
+                      </td>
+                      <td className="hidden sm:table-cell px-6 py-4 text-sm text-gray-600">
+                        {item.category}
+                      </td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm">
+                        <span className="px-2 sm:px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs font-semibold">
+                          {item.quantity}
+                        </span>
+                      </td>
+                      <td className="hidden lg:table-cell px-6 py-4 text-sm">
+                        <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs font-semibold">
+                          {item.condition}
+                        </span>
+                      </td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-900 font-semibold">
+                        {item.value}
+                      </td>
+                      <td className="hidden lg:table-cell px-6 py-4 text-sm text-gray-600">
+                        {item.lastUpdated}
+                      </td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm">
+                        <div className="flex items-center gap-1 sm:gap-2">
+                          <button className="p-1 sm:p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors flex-shrink-0">
+                            <Edit2 className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleDelete(item.id)}
+                            className="p-1 sm:p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors flex-shrink-0"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {filteredInventory.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-600">No inventory items found</p>
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-gray-600 text-sm sm:text-base">No inventory items found</p>
               </div>
             )}
           </div>
