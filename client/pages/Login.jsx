@@ -87,41 +87,45 @@ export default function Login() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-white">
       {/* Header */}
-      <div className="flex items-center justify-center pt-6 pb-8">
+      <div className="flex items-center justify-center pt-4 sm:pt-6 pb-6 sm:pb-8">
         <div className="flex items-center gap-2">
           <div className="bg-green-600 p-2 rounded-lg">
             <RecycleIcon className="w-6 h-6 text-white" />
           </div>
-          <span className="text-xl font-semibold text-gray-800">E-Cycle</span>
+          <span className="text-lg sm:text-xl font-semibold text-gray-800">
+            E-Cycle
+          </span>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 md:gap-12">
           {/* Left Column - Testimonial */}
-          <div className="bg-green-100 rounded-2xl p-8 flex flex-col justify-center">
+          <div className="bg-green-100 rounded-2xl p-6 sm:p-8 flex flex-col justify-center hidden lg:flex">
             <div className="mb-6">
               <img
                 src="https://images.pexels.com/photos/30820659/pexels-photo-30820659.jpeg"
                 alt="Customer testimonial"
-                className="w-24 h-24 rounded-full object-cover mx-auto mb-4"
+                className="w-20 h-20 sm:w-24 sm:h-24 rounded-full object-cover mx-auto mb-4"
               />
             </div>
-            <p className="text-gray-700 mb-6 leading-relaxed text-center">
+            <p className="text-sm sm:text-base text-gray-700 mb-6 leading-relaxed text-center">
               "Ever since I started using this platform, submitting my LOTs has
               become effortless, and I finally feel confident knowing every
               step—from verification to payment—is recorded, secure, and
               completely visible to me"
             </p>
             <div className="text-center">
-              <p className="font-semibold text-gray-900">Olawale Ogunmola</p>
-              <p className="text-sm text-gray-600">
+              <p className="font-semibold text-gray-900 text-sm sm:text-base">
+                Olawale Ogunmola
+              </p>
+              <p className="text-xs sm:text-sm text-gray-600">
                 IT Director, Tech Solutions Nigeria
               </p>
             </div>
-            <div className="mt-6 flex items-center justify-center gap-2">
-              <span className="text-sm text-gray-700">
+            <div className="mt-6 flex items-center justify-center gap-2 text-xs sm:text-sm">
+              <span className="text-gray-700">
                 Over 700+ Sellers and Recyclers joined
               </span>
               <div className="flex -space-x-2">
@@ -143,14 +147,16 @@ export default function Login() {
           <div>
             <Button
               onClick={() => navigate("/")}
-              className="mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors"
+              className="mb-4 sm:mb-6 px-4 py-2 text-gray-700 hover:text-green-600 bg-transparent hover:bg-gray-100 rounded-lg font-medium transition-colors text-xs sm:text-sm"
               aria-label="Go back to home page"
             >
               ← Back to Home
             </Button>
-            <h1 className="text-3xl font-bold text-gray-900 mb-8">Login</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 sm:mb-8">
+              Login
+            </h1>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
               {/* Email */}
               <div>
                 <input
@@ -160,14 +166,16 @@ export default function Login() {
                   value={formData.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.email && errors.email
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.email && errors.email && (
-                  <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
+                    {errors.email}
+                  </p>
                 )}
               </div>
 
@@ -180,29 +188,33 @@ export default function Login() {
                   value={formData.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className={`w-full px-4 py-3 rounded-lg border-2 focus:outline-none transition-colors ${
+                  className={`w-full px-3 sm:px-4 py-2 sm:py-3 rounded-lg border-2 focus:outline-none transition-colors text-sm ${
                     touched.password && errors.password
                       ? "border-red-500 bg-red-50"
                       : "border-green-300 focus:border-green-500"
                   }`}
                 />
                 {touched.password && errors.password && (
-                  <p className="text-red-500 text-sm mt-1">{errors.password}</p>
+                  <p className="text-red-500 text-xs sm:text-sm mt-1">
+                    {errors.password}
+                  </p>
                 )}
               </div>
 
               {/* Remember Me & Forgot Password */}
-              <div className="flex items-center justify-between">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-2 sm:gap-0">
                 <label className="flex items-center gap-2">
                   <input
                     type="checkbox"
                     className="w-4 h-4 rounded border-green-300"
                   />
-                  <span className="text-gray-700 text-sm">Remember Me</span>
+                  <span className="text-gray-700 text-xs sm:text-sm">
+                    Remember Me
+                  </span>
                 </label>
                 <a
                   href="#"
-                  className="text-green-600 hover:text-green-700 text-sm font-semibold"
+                  className="text-green-600 hover:text-green-700 text-xs sm:text-sm font-semibold"
                 >
                   Forgotten password?
                 </a>
@@ -211,36 +223,38 @@ export default function Login() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-green-600 text-white hover:bg-green-700 py-3 rounded-lg font-semibold mt-6"
+                className="w-full bg-green-600 text-white hover:bg-green-700 py-2 sm:py-3 rounded-lg font-semibold mt-4 sm:mt-6 text-sm"
               >
                 Login
               </Button>
             </form>
 
             {/* OAuth Options */}
-            <div className="mt-6">
+            <div className="mt-4 sm:mt-6">
               <div className="flex items-center gap-4 mb-4">
                 <div className="flex-1 h-px bg-gray-300"></div>
-                <span className="text-gray-600 text-sm">Or Continue With</span>
+                <span className="text-gray-600 text-xs sm:text-sm">
+                  Or Continue With
+                </span>
                 <div className="flex-1 h-px bg-gray-300"></div>
               </div>
 
-              <div className="grid grid-cols-3 gap-4">
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Apple className="w-5 h-5" />
+              <div className="grid grid-cols-3 gap-3 sm:gap-4">
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2">
+                  <Apple className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
-                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-3 flex items-center justify-center gap-2">
-                  <Mail className="w-5 h-5" />
+                <Button className="bg-gray-100 text-gray-700 hover:bg-gray-200 py-2 sm:py-3 flex items-center justify-center gap-2">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5" />
                 </Button>
-                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-3 flex items-center justify-center gap-2">
+                <Button className="bg-blue-100 text-blue-700 hover:bg-blue-200 py-2 sm:py-3 flex items-center justify-center gap-2 text-sm">
                   f
                 </Button>
               </div>
             </div>
 
             {/* Signup Link */}
-            <div className="mt-6 text-center">
-              <p className="text-gray-600 text-sm">
+            <div className="mt-4 sm:mt-6 text-center">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 <input type="checkbox" className="mr-2" />
                 By signing up, I agree to the{" "}
                 <a href="#" className="text-gray-900 underline">
@@ -254,8 +268,8 @@ export default function Login() {
               </p>
             </div>
 
-            <div className="mt-4 text-center">
-              <p className="text-gray-600 text-sm">
+            <div className="mt-3 sm:mt-4 text-center">
+              <p className="text-gray-600 text-xs sm:text-sm">
                 Do not have an Account?{" "}
                 <button
                   onClick={() => navigate("/auth/role-selection")}
