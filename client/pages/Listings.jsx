@@ -82,7 +82,7 @@ export default function Listings() {
   const totalViews = listings.reduce((acc, l) => acc + l.views, 0);
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       <Sidebar />
 
       <div className="flex-1 flex flex-col overflow-hidden">
@@ -91,19 +91,19 @@ export default function Listings() {
           setSearchQuery={setSearchQuery}
         />
 
-        <div className="flex-1 overflow-auto p-6">
-          <div className="mb-8 flex items-center justify-between">
+        <div className="flex-1 overflow-auto p-4 sm:p-6">
+          <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-2">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
                 My Listings
               </h2>
-              <p className="text-gray-600">
+              <p className="text-sm sm:text-base text-gray-600">
                 View and manage all your marketplace listings
               </p>
             </div>
             <Button
               onClick={() => navigate("/dashboard/add-listings")}
-              className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2"
+              className="bg-green-600 text-white hover:bg-green-700 flex items-center gap-2 w-full sm:w-auto justify-center text-sm"
             >
               <Plus className="w-4 h-4" />
               Create Listing
@@ -111,7 +111,7 @@ export default function Listings() {
           </div>
 
           {/* Summary Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-8">
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <p className="text-gray-600 text-sm font-medium">
                 Total Listings
