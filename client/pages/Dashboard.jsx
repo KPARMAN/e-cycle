@@ -71,7 +71,7 @@ export default function Dashboard() {
   ];
 
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex flex-col md:flex-row min-h-screen bg-gray-100">
       <Sidebar />
 
       {/* Main Content */}
@@ -82,7 +82,7 @@ export default function Dashboard() {
         />
 
         {/* Content Area */}
-        <div className="flex-1 overflow-auto p-6">
+        <div className="flex-1 overflow-auto p-4 sm:p-6">
           {/* Dashboard Overview */}
           <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">
