@@ -142,86 +142,99 @@ export default function Listings() {
 
           {/* Listings Table */}
           <div className="bg-white rounded-lg shadow-sm overflow-hidden">
-            <table className="w-full">
-              <thead className="bg-green-50 border-b border-gray-200">
-                <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Listing Title
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Category
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Price
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Status
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Views
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Posted
-                  </th>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">
-                    Actions
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-200">
-                {filteredListings.map((listing) => (
-                  <tr
-                    key={listing.id}
-                    className="hover:bg-gray-50 transition-colors"
-                  >
-                    <td className="px-6 py-4 text-sm text-gray-900 font-medium">
-                      {listing.title}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {listing.category}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-900 font-semibold">
-                      {listing.price}
-                    </td>
-                    <td className="px-6 py-4 text-sm">
-                      <span
-                        className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
-                          listing.status,
-                        )}`}
-                      >
-                        {listing.status}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {listing.views} views
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-600">
-                      {listing.posted}
-                    </td>
-                    <td className="px-6 py-4 text-sm">
-                      <div className="flex items-center gap-2">
-                        <button className="p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors">
-                          <Eye className="w-4 h-4" />
-                        </button>
-                        <button className="p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors">
-                          <Edit2 className="w-4 h-4" />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(listing.id)}
-                          className="p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </button>
-                      </div>
-                    </td>
+            <div className="overflow-x-auto">
+              <table className="w-full min-w-max">
+                <thead className="bg-green-50 border-b border-gray-200">
+                  <tr>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Title
+                    </th>
+                    <th className="hidden sm:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Category
+                    </th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Price
+                    </th>
+                    <th className="hidden md:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Status
+                    </th>
+                    <th className="hidden lg:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Views
+                    </th>
+                    <th className="hidden lg:table-cell px-6 py-4 text-left text-sm font-semibold text-gray-900">
+                      Posted
+                    </th>
+                    <th className="px-3 sm:px-6 py-3 sm:py-4 text-left text-xs sm:text-sm font-semibold text-gray-900">
+                      Actions
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
+                </thead>
+                <tbody className="divide-y divide-gray-200">
+                  {filteredListings.map((listing) => (
+                    <tr
+                      key={listing.id}
+                      className="hover:bg-gray-50 transition-colors"
+                    >
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-900 font-medium">
+                        <div className="max-w-xs truncate">{listing.title}</div>
+                        <div className="sm:hidden text-xs text-gray-600 mt-1">
+                          {listing.status === "Active" ? (
+                            <span className="inline-block px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                              Active
+                            </span>
+                          ) : (
+                            <span className="inline-block px-2 py-1 bg-red-100 text-red-800 rounded text-xs">
+                              Expired
+                            </span>
+                          )}
+                        </div>
+                      </td>
+                      <td className="hidden sm:table-cell px-6 py-4 text-sm text-gray-600">
+                        {listing.category}
+                      </td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-xs sm:text-sm text-gray-900 font-semibold">
+                        {listing.price}
+                      </td>
+                      <td className="hidden md:table-cell px-6 py-4 text-sm">
+                        <span
+                          className={`px-3 py-1 rounded-full text-xs font-semibold ${getStatusColor(
+                            listing.status,
+                          )}`}
+                        >
+                          {listing.status}
+                        </span>
+                      </td>
+                      <td className="hidden lg:table-cell px-6 py-4 text-sm text-gray-600">
+                        {listing.views} views
+                      </td>
+                      <td className="hidden lg:table-cell px-6 py-4 text-sm text-gray-600">
+                        {listing.posted}
+                      </td>
+                      <td className="px-3 sm:px-6 py-3 sm:py-4 text-sm">
+                        <div className="flex items-center gap-1 sm:gap-2">
+                          <button className="p-1 sm:p-2 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded transition-colors flex-shrink-0">
+                            <Eye className="w-4 h-4" />
+                          </button>
+                          <button className="p-1 sm:p-2 text-gray-600 hover:text-green-600 hover:bg-green-50 rounded transition-colors flex-shrink-0">
+                            <Edit2 className="w-4 h-4" />
+                          </button>
+                          <button
+                            onClick={() => handleDelete(listing.id)}
+                            className="p-1 sm:p-2 text-gray-600 hover:text-red-600 hover:bg-red-50 rounded transition-colors flex-shrink-0"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
 
             {filteredListings.length === 0 && (
-              <div className="text-center py-12">
-                <p className="text-gray-600">No listings found</p>
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-gray-600 text-sm sm:text-base">No listings found</p>
               </div>
             )}
           </div>
