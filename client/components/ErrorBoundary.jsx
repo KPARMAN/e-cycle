@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import { Component } from "react";
 
 class ErrorBoundary extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class ErrorBoundary extends Component {
       error,
       errorInfo,
     });
-    console.error('Error caught by ErrorBoundary:', error, errorInfo);
+    console.error("Error caught by ErrorBoundary:", error, errorInfo);
   }
 
   render() {
@@ -39,7 +39,7 @@ class ErrorBoundary extends Component {
               </details>
             )}
             <button
-              onClick={() => window.location.href = '/'}
+              onClick={() => (window.location.href = "/")}
               className="w-full px-4 py-2 bg-primary text-primary-foreground rounded hover:opacity-90 transition-opacity"
             >
               Go to Home
