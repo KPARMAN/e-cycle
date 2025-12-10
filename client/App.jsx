@@ -2,7 +2,7 @@ import { Toaster } from "@/components/ui/toaster.jsx";
 import { Toaster as Sonner } from "@/components/ui/sonner.jsx";
 import { TooltipProvider } from "@/components/ui/tooltip.jsx";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorBoundary from "@/components/ErrorBoundary.jsx";
 import Index from "./pages/Index.jsx";
 import NotFound from "./pages/NotFound.jsx";
@@ -30,7 +30,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <Router>
         <ErrorBoundary>
           <Routes>
             <Route path="/" element={<Index />} />
@@ -60,7 +60,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
         </ErrorBoundary>
-      </BrowserRouter>
+      </Router>
     </TooltipProvider>
   </QueryClientProvider>
 );
