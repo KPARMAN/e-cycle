@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
     fs: {
-      allow: [".","./client", "./shared"],
+      allow: [".", "./client", "./shared"],
       deny: [".env", ".env.*", "*.{crt,pem}", "**/.git/**", "server/**"],
     },
   },
@@ -36,6 +36,28 @@ function expressPlugin() {
       // Mount Express app only for API routes (/api/*)
       // This prevents Express from intercepting SPA routes like /dashboard
       server.middlewares.use("/api", app);
+
+      // SPA fallback: serve index.html for all non-API routes
+      // This allows React Router to handle client-side routing
+      return () => {
+        server.middlewares.use((req, res, next) => {
+          // Skip API routes
+          if (req.url.startsWith("/api")) {
+            return next();
+          }
+          // Skip static assets
+          if (
+            req.url.match(
+              /\.(js|css|json|png|jpg|jpeg|gif|svg|ico|woff|woff2|ttf|eot)$/i,
+            )
+          ) {
+            return next();
+          }
+          // Serve index.html for all other requests (SPA routing)
+          req.url = "/index.html";
+          next();
+        });
+      };
     },
   };
 }
