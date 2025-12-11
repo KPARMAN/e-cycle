@@ -47,8 +47,8 @@ export default function CustomerStories() {
           {/* Image */}
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/7512913/pexels-photo-7512913.jpeg"
-              alt="E-waste recycling: Woman sorting plastic and electronic materials into recycling bin"
+              src="https://images.pexels.com/photos/18216395/pexels-photo-18216395.jpeg"
+              alt="Men sorting recyclables at a landfill in Africa with piled plastic bottles and waste materials"
               className="w-full h-full object-cover"
             />
           </div>

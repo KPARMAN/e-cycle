@@ -23,16 +23,13 @@ export default function CTA() {
             </div>
           </div>
 
-          {/* Right side - Illustration */}
-          <div className="relative h-80 lg:h-96">
-            <div className="absolute inset-0 bg-gradient-to-br from-green-200 via-teal-200 to-cyan-200 rounded-3xl opacity-50"></div>
-            <div className="absolute inset-0 bg-gradient-to-tl from-emerald-100 to-transparent rounded-3xl opacity-30"></div>
-            <div className="relative h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl mb-4"></div>
-                <p className="text-sm font-semibold text-gray-700">Start Your Journey</p>
-              </div>
-            </div>
+          {/* Right side - Image */}
+          <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
+            <img
+              src="https://images.pexels.com/photos/33621870/pexels-photo-33621870.jpeg"
+              alt="Aerial view of waste management and environmental concerns in rural Mpumalanga, South Africa"
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
       </div>
