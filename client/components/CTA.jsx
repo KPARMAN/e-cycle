@@ -26,8 +26,8 @@ export default function CTA() {
           {/* Right side - Image */}
           <div className="relative h-80 lg:h-96 rounded-xl overflow-hidden shadow-lg">
             <img
-              src="https://images.pexels.com/photos/33621870/pexels-photo-33621870.jpeg"
-              alt="Aerial view of waste management and environmental concerns in rural Mpumalanga, South Africa"
+              src="https://images.pexels.com/photos/7598913/pexels-photo-7598913.jpeg"
+              alt="Collection of broken electronic components and discarded computer technology stacked together"
               className="w-full h-full object-cover"
             />
           </div>
