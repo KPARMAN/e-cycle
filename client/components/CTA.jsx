@@ -11,13 +11,18 @@ export default function CTA() {
               Ready to transform your e-waste management?
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Join thousands of organizations already benefiting from our innovative e-waste management platform. Start your sustainability journey today.
+              Join thousands of organizations already benefiting from our
+              innovative e-waste management platform. Start your sustainability
+              journey today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-6 rounded-lg">
                 Get started free
               </Button>
-              <Button variant="outline" className="text-base px-8 py-6 rounded-lg border-gray-300">
+              <Button
+                variant="outline"
+                className="text-base px-8 py-6 rounded-lg border-gray-300"
+              >
                 Schedule demo
               </Button>
             </div>
