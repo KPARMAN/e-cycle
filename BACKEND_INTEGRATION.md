@@ -1,12 +1,15 @@
 # E-Cycle Frontend-Backend Integration Guide
 
 ## Overview
+
 Your frontend is now connected to your backend API running on `http://localhost:4000`. This document explains how to use the integrated services.
 
 ## Setup
 
 ### 1. Environment Variables
+
 The `.env.local` file is configured with:
+
 ```
 VITE_API_URL=http://localhost:4000
 ```
@@ -14,13 +17,17 @@ VITE_API_URL=http://localhost:4000
 If your backend runs on a different URL, update this value.
 
 ### 2. Start Backend
+
 Ensure your backend is running:
+
 ```bash
 npm run dev  # or your backend start command
 ```
 
 ### 3. Verify Connection
+
 Test the health endpoint:
+
 ```bash
 curl http://localhost:4000/api/health
 ```
@@ -30,6 +37,7 @@ curl http://localhost:4000/api/health
 ### Authentication Service (`client/lib/services/auth.js`)
 
 #### Register User
+
 ```javascript
 import authService from "@/lib/services/auth.js";
 
@@ -37,9 +45,9 @@ try {
   const result = await authService.register({
     name: "John Doe",
     email: "john@example.com",
-    password: "securePassword123"
+    password: "securePassword123",
   });
-  
+
   console.log(result.user);
   console.log(result.token);
 } catch (error) {
@@ -48,13 +56,14 @@ try {
 ```
 
 #### Login User
+
 ```javascript
 try {
   const result = await authService.login({
     email: "john@example.com",
-    password: "securePassword123"
+    password: "securePassword123",
   });
-  
+
   console.log(result.user);
 } catch (error) {
   console.error(error.message);
@@ -62,6 +71,7 @@ try {
 ```
 
 #### Get Current User
+
 ```javascript
 const user = authService.getUser();
 const token = authService.getToken();
@@ -69,6 +79,7 @@ const isAuth = authService.isAuthenticated();
 ```
 
 #### Logout
+
 ```javascript
 authService.logout();
 ```
@@ -80,7 +91,7 @@ import uploadService from "@/lib/services/upload.js";
 
 try {
   const response = await uploadService.uploadImage(file);
-  console.log(response.url);  // Cloudinary URL
+  console.log(response.url); // Cloudinary URL
   console.log(response.public_id);
 } catch (error) {
   console.error(error.message);
@@ -112,12 +123,12 @@ const data = await ApiClient.get("/api/endpoint");
 
 // POST request
 const result = await ApiClient.post("/api/endpoint", {
-  key: "value"
+  key: "value",
 });
 
 // PUT request
 await ApiClient.put("/api/endpoint", {
-  key: "newValue"
+  key: "newValue",
 });
 
 // DELETE request
@@ -127,7 +138,9 @@ await ApiClient.delete("/api/endpoint");
 ## Using in React Components
 
 ### Example: Login Page
+
 The Login and Signup pages are already integrated. They:
+
 - Validate form input
 - Call `authService.login()` or `authService.register()`
 - Store JWT token and user info in localStorage
@@ -135,6 +148,7 @@ The Login and Signup pages are already integrated. They:
 - Navigate to dashboard on success
 
 ### Example: Using useAuth Hook
+
 ```javascript
 import useAuth from "@/hooks/useAuth.js";
 
@@ -159,6 +173,7 @@ export function MyComponent() {
 ```
 
 ### Example: File Upload
+
 ```javascript
 import { useState } from "react";
 import uploadService from "@/lib/services/upload.js";
@@ -232,18 +247,22 @@ const data = await ApiClient.get("/api/protected-endpoint");
 ## Testing
 
 ### Manual Testing
+
 1. Visit `http://localhost:3000/auth/signup`
 2. Register with test credentials
 3. You should see a success message and be redirected to dashboard
 4. Check localStorage for `auth_token` and `user`
 
 ### Testing with Postman
+
 Use the endpoints from your ENDPOINTS.md:
+
 - `POST /api/auth/register`
 - `POST /api/auth/login`
 - `POST /api/upload`
 
 ### Backend Health Check
+
 ```bash
 curl http://localhost:4000/api/health
 ```
@@ -251,12 +270,14 @@ curl http://localhost:4000/api/health
 ## Pages Already Integrated
 
 ✅ **Login** (`client/pages/Login.jsx`)
+
 - Calls `authService.login()`
 - Shows loading state
 - Error handling with toast
 - Stores token and user
 
 ✅ **Signup** (`client/pages/Signup.jsx`)
+
 - Calls `authService.register()`
 - Shows loading state
 - Error handling with toast
@@ -272,6 +293,7 @@ To integrate more features:
 4. **Protected Routes**: Use `useAuth` hook to check authentication
 
 Example service template:
+
 ```javascript
 import ApiClient from "../api.js";
 
@@ -297,18 +319,22 @@ export const myService = {
 ## Common Issues
 
 ### "Backend is not available"
+
 - Check if backend is running on `http://localhost:4000`
 - Verify `VITE_API_URL` in `.env.local`
 
 ### "Invalid credentials"
+
 - User doesn't exist
 - Email/password are incorrect
 
 ### CORS Errors
+
 - Ensure backend has CORS enabled
 - Check `FRONTEND_URL` environment variable on backend
 
 ### Token Expired
+
 - Token is stored in localStorage
 - Implement token refresh logic if needed
 - For now, user needs to login again
@@ -316,6 +342,7 @@ export const myService = {
 ## Support
 
 Refer to your backend ENDPOINTS.md for:
+
 - Complete endpoint list
 - Request/response formats
 - Authentication requirements

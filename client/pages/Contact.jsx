@@ -15,9 +15,24 @@ export default function Contact() {
   };
 
   const contactChannels = [
-    { icon: "📞", label: "Phone", value: "+234 (your number)", href: "tel:+234" },
-    { icon: "📧", label: "Email", value: "support@ecycle.ng", href: "mailto:support@ecycle.ng" },
-    { icon: "💬", label: "WhatsApp", value: "Start a chat instantly", href: "https://wa.me/" },
+    {
+      icon: "📞",
+      label: "Phone",
+      value: "+234 (your number)",
+      href: "tel:+234",
+    },
+    {
+      icon: "📧",
+      label: "Email",
+      value: "support@ecycle.ng",
+      href: "mailto:support@ecycle.ng",
+    },
+    {
+      icon: "💬",
+      label: "WhatsApp",
+      value: "Start a chat instantly",
+      href: "https://wa.me/",
+    },
   ];
 
   const supportItems = [
@@ -52,7 +67,8 @@ export default function Contact() {
               Get in Touch
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Have bulk e-waste to sell or want to partner with us? We'd love to hear from you.
+              Have bulk e-waste to sell or want to partner with us? We'd love to
+              hear from you.
             </p>
           </div>
         </section>
@@ -73,7 +89,8 @@ export default function Contact() {
                       {channel.icon} {channel.label}
                     </h3>
                     <p className="text-gray-600">
-                      {channel.href.startsWith("mailto:") || channel.href.startsWith("tel:") ? (
+                      {channel.href.startsWith("mailto:") ||
+                      channel.href.startsWith("tel:") ? (
                         <a
                           href={channel.href}
                           className="text-green-600 hover:text-green-700 transition-colors"
@@ -92,7 +109,8 @@ export default function Contact() {
                     ⏰ Business Hours
                   </h3>
                   <p className="text-gray-600">
-                    Monday – Saturday<br />
+                    Monday – Saturday
+                    <br />
                     9:00 AM – 6:00 PM
                   </p>
                 </div>

@@ -54,7 +54,9 @@ export default function AboutUs() {
               Our Mission
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed mb-8">
-              To create a seamless pipeline that connects technicians and bulk e-waste sellers to certified recyclers—ensuring safe disposal, environmental sustainability, and fair value recovery.
+              To create a seamless pipeline that connects technicians and bulk
+              e-waste sellers to certified recyclers—ensuring safe disposal,
+              environmental sustainability, and fair value recovery.
             </p>
           </div>
         </section>
@@ -66,7 +68,9 @@ export default function AboutUs() {
               Our Vision
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed">
-              A Nigeria where e-waste is no longer burned or dumped, but efficiently collected, reused, and recycled through a structured digital marketplace.
+              A Nigeria where e-waste is no longer burned or dumped, but
+              efficiently collected, reused, and recycled through a structured
+              digital marketplace.
             </p>
           </div>
         </section>
@@ -88,15 +92,22 @@ export default function AboutUs() {
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">✓</span>
-                <span>Ensure compliance with NESREA & environmental standards.</span>
+                <span>
+                  Ensure compliance with NESREA & environmental standards.
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">✓</span>
-                <span>Facilitate bulk logistics for safe e-waste movement.</span>
+                <span>
+                  Facilitate bulk logistics for safe e-waste movement.
+                </span>
               </li>
               <li className="flex items-start">
                 <span className="text-primary mr-3">✓</span>
-                <span>Support technicians and businesses with a reliable disposal solution.</span>
+                <span>
+                  Support technicians and businesses with a reliable disposal
+                  solution.
+                </span>
               </li>
             </ul>
           </div>
@@ -108,7 +119,7 @@ export default function AboutUs() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8">
               Why We Exist
             </h2>
-            
+
             <div className="space-y-8">
               <div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">

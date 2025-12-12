@@ -63,7 +63,8 @@ export default function Services() {
               Our Services
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              E-Cycle provides a reliable and structured system for sourcing, listing, and processing bulk electronic waste across Nigeria.
+              E-Cycle provides a reliable and structured system for sourcing,
+              listing, and processing bulk electronic waste across Nigeria.
             </p>
           </div>
         </section>
@@ -97,7 +98,9 @@ export default function Services() {
               Partnerships & Corporate Recycling
             </h2>
             <p className="text-lg text-gray-600 leading-relaxed text-center mb-8">
-              We work with NGOs, government agencies, community groups, electronics companies, and corporate offices for large-scale recycling and sustainability programs.
+              We work with NGOs, government agencies, community groups,
+              electronics companies, and corporate offices for large-scale
+              recycling and sustainability programs.
             </p>
           </div>
         </section>

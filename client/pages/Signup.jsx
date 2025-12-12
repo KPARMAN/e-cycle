@@ -141,7 +141,7 @@ export default function Signup() {
       });
 
       toast.success(
-        `Welcome ${result.user.name}! Your account has been created.`
+        `Welcome ${result.user.name}! Your account has been created.`,
       );
       navigate("/dashboard");
     } catch (error) {
