@@ -2,6 +2,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button.jsx";
 import { RecycleIcon, Apple, Mail } from "lucide-react";
+import authService from "@/lib/services/auth.js";
+import { toast } from "sonner";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -13,6 +15,7 @@ export default function Login() {
 
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
+  const [isLoading, setIsLoading] = useState(false);
 
   const validateForm = () => {
     const newErrors = {};
@@ -77,10 +80,26 @@ export default function Login() {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (validateForm()) {
+    if (!validateForm()) return;
+
+    setIsLoading(true);
+    try {
+      const result = await authService.login({
+        email: formData.email,
+        password: formData.password,
+      });
+
+      toast.success(`Welcome back, ${result.user.name}!`);
       navigate("/dashboard");
+    } catch (error) {
+      toast.error(error.message || "Login failed. Please try again.");
+      setErrors({
+        submit: error.message || "Login failed",
+      });
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -150,6 +169,12 @@ export default function Login() {
             </Button>
             <h1 className="text-3xl font-bold text-gray-900 mb-8">Login</h1>
 
+            {errors.submit && (
+              <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-700 text-sm">{errors.submit}</p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="space-y-4">
               {/* Email */}
               <div>
@@ -211,9 +236,10 @@ export default function Login() {
               {/* Submit Button */}
               <Button
                 type="submit"
-                className="w-full bg-green-600 text-white hover:bg-green-700 py-3 rounded-lg font-semibold mt-6"
+                disabled={isLoading}
+                className="w-full bg-green-600 text-white hover:bg-green-700 py-3 rounded-lg font-semibold mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                Login
+                {isLoading ? "Logging in..." : "Login"}
               </Button>
             </form>
 
