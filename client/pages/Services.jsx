@@ -8,39 +8,39 @@ export default function Services() {
 
   const services = [
     {
-      title: "E-Waste Collection",
+      title: "Bulk E-Waste Marketplace",
       description:
-        "We provide efficient and safe collection of electronic waste from your organization. Our team ensures proper handling and transportation of all e-waste materials.",
-      icon: "📦",
+        "Connect with certified recycling companies. Upload batches of faulty or scrap electronics, add photos and weight details, receive offers from verified recyclers, and sell at fair transparent prices.",
+      icon: "🛒",
     },
     {
-      title: "Waste Assessment & Categorization",
+      title: "Verified Recycler Network",
       description:
-        "Comprehensive analysis and categorization of your electronic waste streams. We identify valuable materials and create detailed reports for compliance tracking.",
-      icon: "📊",
-    },
-    {
-      title: "Recycling & Recovery",
-      description:
-        "Advanced recycling processes that recover valuable materials from e-waste. We maximize material recovery while ensuring environmental responsibility.",
-      icon: "♻️",
-    },
-    {
-      title: "Certification & Compliance",
-      description:
-        "Full compliance documentation and certification for all recycling activities. We ensure your organization meets all regulatory requirements.",
+        "All recycling companies on E-Cycle are vetted for NESREA compliance, proper handling procedures, industry reputation, and environmental safety standards. Sellers can trust ethical processing.",
       icon: "✓",
     },
     {
-      title: "Platform Management",
+      title: "E-Waste Logistics Support",
       description:
-        "Our intuitive E-Cycle platform provides real-time tracking, inventory management, and analytics for your e-waste operations.",
-      icon: "💻",
+        "We facilitate safe movement of bulk e-waste with pickup scheduling, aggregation points, coordination with partners, and support for secure transportation.",
+      icon: "🚚",
     },
     {
-      title: "Consultation & Support",
+      title: "Secure Payments",
       description:
-        "Expert consultation to optimize your e-waste management strategy. Our team provides ongoing support to maximize efficiency and sustainability.",
+        "Our digital payment system enables safe transactions, seller protection, instant payout options, and transaction receipts with full traceability (Coming Soon).",
+      icon: "💳",
+    },
+    {
+      title: "E-Waste Data & Insights",
+      description:
+        "Analytics dashboard showing waste volume trends, material categories, high-demand items, and regional supply hotspots. Help recyclers scale operations efficiently.",
+      icon: "📊",
+    },
+    {
+      title: "Technician & Business Support",
+      description:
+        "Expert assistance for listing bulk e-waste, understanding market prices, partnering with recyclers, and navigating environmental compliance to maximize value.",
       icon: "🤝",
     },
   ];
@@ -63,9 +63,7 @@ export default function Services() {
               Our Services
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Comprehensive e-waste management solutions designed to help your
-              organization achieve sustainability goals while maximizing
-              efficiency and compliance.
+              E-Cycle provides a reliable and structured system for sourcing, listing, and processing bulk electronic waste across Nigeria.
             </p>
           </div>
         </section>
@@ -92,21 +90,29 @@ export default function Services() {
           </div>
         </section>
 
-        {/* CTA Section */}
+        {/* Partnerships Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Partnerships & Corporate Recycling
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed text-center mb-8">
+              We work with NGOs, government agencies, community groups, electronics companies, and corporate offices for large-scale recycling and sustainability programs.
+            </p>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
-              Ready to optimize your e-waste management?
+              Start turning your e-waste into sustainable value today
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Contact our team to learn more about how we can support your
-              organization.
-            </p>
             <Button
               onClick={() => navigate("/contact")}
               className="bg-primary text-white hover:bg-primary/90 text-base px-8 py-3 rounded-lg font-semibold"
             >
-              Get in Touch
+              Explore Our Services
             </Button>
           </div>
         </section>

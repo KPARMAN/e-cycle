@@ -6,31 +6,21 @@ import { useNavigate } from "react-router-dom";
 export default function AboutUs() {
   const navigate = useNavigate();
 
-  const values = [
-    {
-      title: "Sustainability",
-      description:
-        "We are committed to promoting environmental sustainability through responsible e-waste management and material recovery.",
-      icon: "🌍",
-    },
-    {
-      title: "Transparency",
-      description:
-        "Complete visibility into every step of the e-waste lifecycle. We believe in honest communication and detailed reporting.",
-      icon: "👁️",
-    },
-    {
-      title: "Innovation",
-      description:
-        "Leveraging cutting-edge technology and AI to optimize e-waste management processes and maximize material recovery.",
-      icon: "💡",
-    },
-    {
-      title: "Integrity",
-      description:
-        "Operating with the highest ethical standards in compliance with all environmental regulations and certifications.",
-      icon: "✨",
-    },
+  const promises = [
+    { title: "Transparency", icon: "👁️" },
+    { title: "Fair Pricing", icon: "💰" },
+    { title: "Environmental Responsibility", icon: "🌍" },
+    { title: "Safe Recycling", icon: "✓" },
+    { title: "Strong Support for Technicians", icon: "🤝" },
+  ];
+
+  const partners = [
+    "E-Terra",
+    "Hinckley Recycling",
+    "JAZ Metals",
+    "ROSE Electronics",
+    "NGOs and community groups",
+    "NESREA, PEPSA, Ministry of Environment",
   ];
 
   return (
@@ -63,72 +53,156 @@ export default function AboutUs() {
             <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Our Mission
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-6">
-              E-Cycle is dedicated to revolutionizing e-waste management across
-              Africa. We provide comprehensive solutions that connect waste
-              generators with certified recycling partners, ensuring responsible
-              handling of electronic waste while maximizing material recovery
-              and environmental protection.
-            </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
-              Our platform brings transparency, efficiency, and sustainability
-              to the entire e-waste lifecycle—from collection and assessment to
-              secure recycling and compliance tracking.
+            <p className="text-lg text-gray-600 leading-relaxed mb-8">
+              To create a seamless pipeline that connects technicians and bulk e-waste sellers to certified recyclers—ensuring safe disposal, environmental sustainability, and fair value recovery.
             </p>
           </div>
         </section>
 
-        {/* Values Section */}
+        {/* Vision Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Our Core Values
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Our Vision
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {values.map((value, index) => (
+            <p className="text-lg text-gray-600 leading-relaxed">
+              A Nigeria where e-waste is no longer burned or dumped, but efficiently collected, reused, and recycled through a structured digital marketplace.
+            </p>
+          </div>
+        </section>
+
+        {/* What We Do Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              What We Do
+            </h2>
+            <ul className="space-y-4 text-lg text-gray-600 leading-relaxed">
+              <li className="flex items-start">
+                <span className="text-primary mr-3">✓</span>
+                <span>Provide a marketplace for bulk e-waste.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">✓</span>
+                <span>Connect sellers to trusted recycling companies.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">✓</span>
+                <span>Ensure compliance with NESREA & environmental standards.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">✓</span>
+                <span>Facilitate bulk logistics for safe e-waste movement.</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-primary mr-3">✓</span>
+                <span>Support technicians and businesses with a reliable disposal solution.</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/* Why We Exist Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Why We Exist
+            </h2>
+            
+            <div className="space-y-8">
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Technicians and sellers lack:
+                </h3>
+                <ul className="space-y-2 text-lg text-gray-600 leading-relaxed">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Reliable buyers for bulk scrap</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Fair and transparent pricing</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Safe and legal disposal channels</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                  Recyclers need:
+                </h3>
+                <ul className="space-y-2 text-lg text-gray-600 leading-relaxed">
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Consistent, high-volume supply</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Verified, sorted batches</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary mr-3">•</span>
+                    <span>Easier logistics</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                <p className="text-lg text-gray-700 font-semibold">
+                  E-Cycle bridges this gap.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Our Partners Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">
+              Our Partners
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {partners.map((partner, index) => (
                 <div
                   key={index}
-                  className="bg-white p-8 rounded-xl shadow-sm border border-gray-100"
+                  className="flex items-center p-4 bg-gray-50 rounded-lg border border-gray-200"
                 >
-                  <div className="text-5xl mb-4">{value.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 leading-relaxed">
-                    {value.description}
-                  </p>
+                  <span className="text-primary text-xl mr-3">✓</span>
+                  <span className="text-gray-700 font-medium">{partner}</span>
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Stats Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        {/* Our Promise Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">700+</div>
-                <p className="text-gray-600">Active Users</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">40%</div>
-                <p className="text-gray-600">Cost Reduction</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">60%</div>
-                <p className="text-gray-600">Time Savings</p>
-              </div>
-              <div>
-                <div className="text-4xl font-bold text-primary mb-2">100%</div>
-                <p className="text-gray-600">Compliant</p>
-              </div>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
+              Our Promise
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {promises.map((promise, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-xl shadow-sm border border-gray-100 text-center"
+                >
+                  <div className="text-4xl mb-4">{promise.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900">
+                    {promise.title}
+                  </h3>
+                </div>
+              ))}
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
               Join the E-Cycle Community

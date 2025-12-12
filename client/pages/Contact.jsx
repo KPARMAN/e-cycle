@@ -14,6 +14,26 @@ export default function Contact() {
     setTimeout(() => setSubmitted(false), 5000);
   };
 
+  const contactChannels = [
+    { icon: "📞", label: "Phone", value: "+234 (your number)", href: "tel:+234" },
+    { icon: "📧", label: "Email", value: "support@ecycle.ng", href: "mailto:support@ecycle.ng" },
+    { icon: "💬", label: "WhatsApp", value: "Start a chat instantly", href: "https://wa.me/" },
+  ];
+
+  const supportItems = [
+    "Listing guidance",
+    "Recycler verification",
+    "Transaction issues",
+    "Technical support",
+  ];
+
+  const socialMedia = [
+    { name: "Facebook", icon: "f" },
+    { name: "Instagram", icon: "📷" },
+    { name: "X (Twitter)", icon: "𝕏" },
+    { name: "TikTok", icon: "♪" },
+  ];
+
   return (
     <div className="min-h-screen bg-white">
       <Header />
@@ -29,11 +49,10 @@ export default function Contact() {
               ← Back to Home
             </Button>
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              Contact Us
+              Get in Touch
             </h1>
             <p className="text-xl text-gray-600 leading-relaxed">
-              Have questions about our e-waste management solutions? We'd love
-              to hear from you.
+              Have bulk e-waste to sell or want to partner with us? We'd love to hear from you.
             </p>
           </div>
         </section>
@@ -45,60 +64,36 @@ export default function Contact() {
               {/* Contact Information */}
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-8">
-                  Get in Touch
+                  Contact Channels
                 </h2>
 
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    📍 Location
-                  </h3>
-                  <p className="text-gray-600">
-                    E-Cycle Africa
-                    <br />
-                    Innovative Tech Hub
-                    <br />
-                    Lagos, Nigeria
-                  </p>
-                </div>
+                {contactChannels.map((channel, index) => (
+                  <div key={index} className="mb-8">
+                    <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                      {channel.icon} {channel.label}
+                    </h3>
+                    <p className="text-gray-600">
+                      {channel.href.startsWith("mailto:") || channel.href.startsWith("tel:") ? (
+                        <a
+                          href={channel.href}
+                          className="text-green-600 hover:text-green-700 transition-colors"
+                        >
+                          {channel.value}
+                        </a>
+                      ) : (
+                        channel.value
+                      )}
+                    </p>
+                  </div>
+                ))}
 
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    📞 Phone
-                  </h3>
-                  <p className="text-gray-600">
-                    <a
-                      href="tel:+234123456789"
-                      className="text-green-600 hover:text-green-700 transition-colors"
-                    >
-                      +234 (123) 456-7890
-                    </a>
-                  </p>
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    ✉️ Email
-                  </h3>
-                  <p className="text-gray-600">
-                    <a
-                      href="mailto:info@e-cycle.com"
-                      className="text-green-600 hover:text-green-700 transition-colors"
-                    >
-                      info@e-cycle.com
-                    </a>
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                <div className="mt-12 pt-8 border-t border-gray-200">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-4">
                     ⏰ Business Hours
                   </h3>
                   <p className="text-gray-600">
-                    Monday - Friday: 9:00 AM - 6:00 PM
-                    <br />
-                    Saturday: 10:00 AM - 4:00 PM
-                    <br />
-                    Sunday: Closed
+                    Monday – Saturday<br />
+                    9:00 AM – 6:00 PM
                   </p>
                 </div>
               </div>
@@ -146,60 +141,46 @@ export default function Contact() {
                     />
                   </div>
 
-                  {/* Email */}
+                  {/* Phone */}
                   <div>
                     <label
-                      htmlFor="email"
+                      htmlFor="phone"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Email Address *
+                      Phone Number *
                     </label>
                     <input
-                      type="email"
-                      id="email"
-                      name="email"
+                      type="tel"
+                      id="phone"
+                      name="phone"
                       required
-                      placeholder="john@example.com"
+                      placeholder="+234 (123) 456-7890"
                       className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
-                      aria-label="Your email address"
+                      aria-label="Your phone number"
                     />
                   </div>
 
-                  {/* Company */}
+                  {/* Business Type */}
                   <div>
                     <label
-                      htmlFor="company"
+                      htmlFor="businessType"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Company Name
+                      Business Type *
                     </label>
-                    <input
-                      type="text"
-                      id="company"
-                      name="company"
-                      placeholder="Your Company"
-                      className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
-                      aria-label="Your company name"
-                    />
-                  </div>
-
-                  {/* Subject */}
-                  <div>
-                    <label
-                      htmlFor="subject"
-                      className="block text-sm font-semibold text-gray-900 mb-2"
-                    >
-                      Subject *
-                    </label>
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
+                    <select
+                      id="businessType"
+                      name="businessType"
                       required
-                      placeholder="How can we help?"
                       className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors"
-                      aria-label="Message subject"
-                    />
+                      aria-label="Your business type"
+                    >
+                      <option value="">Select an option</option>
+                      <option value="technician">Technician</option>
+                      <option value="seller">Seller</option>
+                      <option value="recycler">Recycler</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
 
                   {/* Message */}
@@ -208,13 +189,13 @@ export default function Contact() {
                       htmlFor="message"
                       className="block text-sm font-semibold text-gray-900 mb-2"
                     >
-                      Message *
+                      Message / Type of e-waste *
                     </label>
                     <textarea
                       id="message"
                       name="message"
                       required
-                      placeholder="Your message..."
+                      placeholder="Describe your e-waste or inquiry..."
                       rows={5}
                       className="w-full px-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-green-500 transition-colors resize-none"
                       aria-label="Your message"
@@ -238,55 +219,45 @@ export default function Contact() {
           </div>
         </section>
 
-        {/* FAQ Section */}
+        {/* Support & Complaints Section */}
         <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">
-              Frequently Asked Questions
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Support & Complaints
             </h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-8 text-center">
+              We assist with:
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {supportItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="bg-white p-6 rounded-lg border border-gray-200 flex items-center"
+                >
+                  <span className="text-primary text-xl mr-4">✓</span>
+                  <span className="text-gray-700 font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
-            <div className="space-y-6">
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  What is the typical response time?
-                </h3>
-                <p className="text-gray-600">
-                  We aim to respond to all inquiries within 24 business hours.
-                  For urgent matters, please call us directly.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  Do you offer support for organizations outside Nigeria?
-                </h3>
-                <p className="text-gray-600">
-                  Yes, we serve organizations across Africa. Contact us to
-                  discuss your specific location and needs.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  How can I schedule a consultation?
-                </h3>
-                <p className="text-gray-600">
-                  You can request a consultation through this contact form, and
-                  our team will reach out to schedule a meeting at your
-                  convenience.
-                </p>
-              </div>
-
-              <div className="bg-white p-6 rounded-lg border border-gray-200">
-                <h3 className="font-semibold text-gray-900 mb-2">
-                  What payment methods do you accept?
-                </h3>
-                <p className="text-gray-600">
-                  We accept various payment methods including bank transfers,
-                  credit cards, and other digital payment options. Details will
-                  be provided during your consultation.
-                </p>
-              </div>
+        {/* Social Media Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+              Follow Us on Social Media
+            </h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {socialMedia.map((social, index) => (
+                <div
+                  key={index}
+                  className="bg-gray-50 p-6 rounded-lg border border-gray-200 text-center hover:shadow-lg transition-shadow cursor-pointer"
+                >
+                  <div className="text-4xl mb-4">{social.icon}</div>
+                  <p className="font-semibold text-gray-900">{social.name}</p>
+                </div>
+              ))}
             </div>
           </div>
         </section>
